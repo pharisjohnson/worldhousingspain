@@ -40,6 +40,12 @@
             'on-surface-variant': 'var(--md-sys-color-on-surface-variant)',
             outline: 'var(--md-sys-color-outline)',
             'outline-variant': 'var(--md-sys-color-outline-variant)',
+            olive: '#3F5B45',
+            ivory: '#FCF9F3',
+            sand: '#E7DDCF',
+            bronze: '#A98158',
+            terracotta: '#B46A42',
+            mediterranean: '#3A7288',
           },
           fontFamily: {
             display: ['"EB Garamond"', 'serif'],
@@ -67,26 +73,26 @@
   <style type="text/tailwindcss">
     @layer base {
       :root {
-        --md-sys-color-primary: #2c6e49;
+        --md-sys-color-primary: #3F5B45;
         --md-sys-color-on-primary: #ffffff;
-        --md-sys-color-primary-container: #b7f1c6;
-        --md-sys-color-on-primary-container: #002110;
-        --md-sys-color-secondary: #745b24;
+        --md-sys-color-primary-container: #c7e0ca;
+        --md-sys-color-on-primary-container: #052010;
+        --md-sys-color-secondary: #A98158;
         --md-sys-color-on-secondary: #ffffff;
-        --md-sys-color-secondary-container: #ffe08c;
-        --md-sys-color-on-secondary-container: #261a00;
-        --md-sys-color-tertiary: #1a6666;
+        --md-sys-color-secondary-container: #ffe0c2;
+        --md-sys-color-on-secondary-container: #2c1a06;
+        --md-sys-color-tertiary: #3A7288;
         --md-sys-color-on-tertiary: #ffffff;
-        --md-sys-color-tertiary-container: #a4f0ef;
-        --md-sys-color-on-tertiary-container: #002020;
-        --md-sys-color-surface: #fdf8f0;
-        --md-sys-color-surface-dim: #dfd9cd;
-        --md-sys-color-surface-bright: #fdf8f0;
+        --md-sys-color-tertiary-container: #c0e8ff;
+        --md-sys-color-on-tertiary-container: #001f2c;
+        --md-sys-color-surface: #FCF9F3;
+        --md-sys-color-surface-dim: #ddd9cf;
+        --md-sys-color-surface-bright: #FCF9F3;
         --md-sys-color-surface-container-lowest: #ffffff;
-        --md-sys-color-surface-container-low: #f9f3e7;
-        --md-sys-color-surface-container: #f3ede1;
-        --md-sys-color-surface-container-high: #ede7db;
-        --md-sys-color-surface-container-highest: #e7e2d6;
+        --md-sys-color-surface-container-low: #f5f0e7;
+        --md-sys-color-surface-container: #efe9df;
+        --md-sys-color-surface-container-high: #e9e3d8;
+        --md-sys-color-surface-container-highest: #e3ddd2;
         --md-sys-color-on-surface: #1d1b16;
         --md-sys-color-on-surface-variant: #4b4539;
         --md-sys-color-outline: #7d7564;
@@ -104,54 +110,54 @@
 
   <!-- Header -->
     
-  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-surface-container-low/90 backdrop-blur-md border-b border-outline-variant/50 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+  <header id="site-header" class="fixed top-6 left-4 right-4 lg:left-8 lg:right-8 z-50 bg-[#FCF9F3]/80 backdrop-blur-xl border border-white/30 shadow-lg shadow-black/5 rounded-2xl transition-all duration-300" style="border-bottom: 2px solid rgba(169, 129, 88, 0.3);">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
       <div class="flex items-center justify-between h-20">
         <!-- Logo -->
         <a href="index.html" class="flex-shrink-0">
-          <img src="https://worldhousingspain.eu/wp-content/uploads/2024/09/whs-logo-retina-500.png" alt="World Housing Spain" class="h-12 w-auto brightness-0">
+          <img src="https://worldhousingspain.eu/wp-content/uploads/2024/09/whs-logo-retina-500.png" alt="World Housing Spain" class="h-11 w-auto brightness-0">
         </a>
         
         <!-- Desktop Nav -->
-        <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
-          <a href="index.html" class="text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors">Home</a>
-          <a href="about.html" class="text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors">About Us</a>
+        <nav class="hidden md:flex items-center gap-10" aria-label="Main navigation">
+          <a href="index.html" class="text-sm font-medium tracking-wide uppercase text-[#3F5B45] hover:text-[#A98158] transition-colors">Home</a>
+          <a href="about.html" class="text-sm font-medium tracking-wide uppercase text-[#3F5B45] hover:text-[#A98158] transition-colors">About Us</a>
           
           <!-- Buy Dropdown -->
           <div class="relative group py-2">
-            <button class="flex items-center gap-1 text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors focus:outline-none">
+            <button class="flex items-center gap-1 text-sm font-medium tracking-wide uppercase text-[#3F5B45] hover:text-[#A98158] transition-colors focus:outline-none">
               <span>Buy</span>
               <span class="material-symbols-outlined text-[16px]">expand_more</span>
             </button>
-            <div class="absolute left-0 mt-2 w-48 bg-surface-container-low border border-outline-variant/50 rounded-lg shadow-elevation-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-2">
-              <a href="projects.html" class="block px-4 py-2 text-sm text-on-surface/85 hover:bg-surface-container hover:text-primary transition-colors">New Builds</a>
-              <a href="03-property-listings.html" class="block px-4 py-2 text-sm text-on-surface/85 hover:bg-surface-container hover:text-primary transition-colors">Resale Properties</a>
+            <div class="absolute left-0 mt-2 w-48 bg-[#FCF9F3]/95 backdrop-blur-xl border border-white/40 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-2">
+              <a href="projects.html" class="block px-4 py-2 text-sm text-[#3F5B45]/85 hover:text-[#A98158] transition-colors">New Builds</a>
+              <a href="03-property-listings.html" class="block px-4 py-2 text-sm text-[#3F5B45]/85 hover:text-[#A98158] transition-colors">Resale Properties</a>
             </div>
           </div>
 
-          <a href="sell.html" class="text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors">Sell</a>
-          <a href="02-luxury-collection.html" class="text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors">Luxury</a>
-          <a href="05-area-guide.html" class="text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors">Areas</a>
+          <a href="sell.html" class="text-sm font-medium tracking-wide uppercase text-[#3F5B45] hover:text-[#A98158] transition-colors">Sell</a>
+          <a href="02-luxury-collection.html" class="text-sm font-medium tracking-wide uppercase text-[#3F5B45] hover:text-[#A98158] transition-colors">Luxury</a>
+          <a href="05-area-guide.html" class="text-sm font-medium tracking-wide uppercase text-[#3F5B45] hover:text-[#A98158] transition-colors">Areas</a>
           
           <!-- Services Dropdown -->
           <div class="relative group py-2">
-            <button class="flex items-center gap-1 text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors focus:outline-none">
+            <button class="flex items-center gap-1 text-sm font-medium tracking-wide uppercase text-[#3F5B45] hover:text-[#A98158] transition-colors focus:outline-none">
               <span>Services</span>
               <span class="material-symbols-outlined text-[16px]">expand_more</span>
             </button>
-            <div class="absolute left-0 mt-2 w-56 bg-surface-container-low border border-outline-variant/50 rounded-lg shadow-elevation-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-2">
-              <a href="sell.html#valuation" class="block px-4 py-2 text-sm text-on-surface/85 hover:bg-surface-container hover:text-primary transition-colors">Property Valuation</a>
-              <a href="contact.html?service=legal" class="block px-4 py-2 text-sm text-on-surface/85 hover:bg-surface-container hover:text-primary transition-colors">Legal Advice</a>
-              <a href="contact.html?service=mortgages" class="block px-4 py-2 text-sm text-on-surface/85 hover:bg-surface-container hover:text-primary transition-colors">Mortgages</a>
-              <a href="contact.html?service=management" class="block px-4 py-2 text-sm text-on-surface/85 hover:bg-surface-container hover:text-primary transition-colors">Full-Service Management</a>
+            <div class="absolute left-0 mt-2 w-56 bg-[#FCF9F3]/95 backdrop-blur-xl border border-white/40 rounded-xl shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-2">
+              <a href="sell.html#valuation" class="block px-4 py-2 text-sm text-[#3F5B45]/85 hover:text-[#A98158] transition-colors">Property Valuation</a>
+              <a href="contact.html?service=legal" class="block px-4 py-2 text-sm text-[#3F5B45]/85 hover:text-[#A98158] transition-colors">Legal Advice</a>
+              <a href="contact.html?service=mortgages" class="block px-4 py-2 text-sm text-[#3F5B45]/85 hover:text-[#A98158] transition-colors">Mortgages</a>
+              <a href="contact.html?service=management" class="block px-4 py-2 text-sm text-[#3F5B45]/85 hover:text-[#A98158] transition-colors">Full-Service Management</a>
             </div>
           </div>
 
-          <a href="contact.html" class="text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors">Contact</a>
+          <a href="contact.html" class="text-sm font-medium tracking-wide uppercase text-[#3F5B45] hover:text-[#A98158] transition-colors">Contact</a>
         </nav>
         
         <!-- Mobile Menu Button -->
-        <button id="open-mobile-nav" class="md:hidden p-2 text-on-surface" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <button id="open-mobile-nav" class="md:hidden p-2 text-[#3F5B45]" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
           <span class="material-symbols-outlined text-[28px]">menu</span>
         </button>
       </div>
@@ -160,39 +166,39 @@
 
   <!-- Mobile Nav Overlay -->
     
-  <div id="mobile-nav" class="fixed inset-0 z-40 bg-surface/95 backdrop-blur-lg hidden" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <div id="mobile-nav" class="fixed inset-0 z-40 bg-[#FCF9F3]/95 backdrop-blur-xl hidden" role="dialog" aria-modal="true" aria-label="Mobile navigation">
     <div class="flex flex-col items-center justify-center h-full gap-5 overflow-y-auto py-12">
-      <button id="close-mobile-nav" class="absolute top-6 right-6 p-2 text-on-surface" aria-label="Close menu">
+      <button id="close-mobile-nav" class="absolute top-6 right-6 p-2 text-[#3F5B45]" aria-label="Close menu">
         <span class="material-symbols-outlined text-[28px]">close</span>
       </button>
-      <a href="index.html" class="text-xl font-display font-medium text-on-surface hover:text-primary transition-colors">Home</a>
-      <a href="about.html" class="text-xl font-display font-medium text-on-surface hover:text-primary transition-colors">About Us</a>
+      <a href="index.html" class="text-xl font-display font-medium text-[#3F5B45] hover:text-[#A98158] transition-colors">Home</a>
+      <a href="about.html" class="text-xl font-display font-medium text-[#3F5B45] hover:text-[#A98158] transition-colors">About Us</a>
       
       <!-- Buy Submenu -->
       <div class="text-center my-1">
-        <span class="text-xs uppercase tracking-widest text-on-surface/40 block mb-1">Buy</span>
+        <span class="text-xs uppercase tracking-widest text-[#3F5B45]/40 block mb-1">Buy</span>
         <div class="flex flex-col gap-1.5">
-          <a href="projects.html" class="text-lg font-display font-medium text-on-surface hover:text-primary transition-colors">New Builds</a>
-          <a href="03-property-listings.html" class="text-lg font-display font-medium text-on-surface hover:text-primary transition-colors">Resale Properties</a>
+          <a href="projects.html" class="text-lg font-display font-medium text-[#3F5B45] hover:text-[#A98158] transition-colors">New Builds</a>
+          <a href="03-property-listings.html" class="text-lg font-display font-medium text-[#3F5B45] hover:text-[#A98158] transition-colors">Resale Properties</a>
         </div>
       </div>
 
-      <a href="sell.html" class="text-xl font-display font-medium text-on-surface hover:text-primary transition-colors">Sell</a>
-      <a href="02-luxury-collection.html" class="text-xl font-display font-medium text-on-surface hover:text-primary transition-colors">Luxury</a>
-      <a href="05-area-guide.html" class="text-xl font-display font-medium text-on-surface hover:text-primary transition-colors">Areas</a>
+      <a href="sell.html" class="text-xl font-display font-medium text-[#3F5B45] hover:text-[#A98158] transition-colors">Sell</a>
+      <a href="02-luxury-collection.html" class="text-xl font-display font-medium text-[#3F5B45] hover:text-[#A98158] transition-colors">Luxury</a>
+      <a href="05-area-guide.html" class="text-xl font-display font-medium text-[#3F5B45] hover:text-[#A98158] transition-colors">Areas</a>
 
       <!-- Services Submenu -->
       <div class="text-center my-1">
-        <span class="text-xs uppercase tracking-widest text-on-surface/40 block mb-1">Services</span>
+        <span class="text-xs uppercase tracking-widest text-[#3F5B45]/40 block mb-1">Services</span>
         <div class="flex flex-col gap-1.5">
-          <a href="sell.html#valuation" class="text-lg font-display font-medium text-on-surface/85 hover:text-primary transition-colors">Property Valuation</a>
-          <a href="contact.html?service=legal" class="text-lg font-display font-medium text-on-surface/85 hover:text-primary transition-colors">Legal Advice</a>
-          <a href="contact.html?service=mortgages" class="text-lg font-display font-medium text-on-surface/85 hover:text-primary transition-colors">Mortgages</a>
-          <a href="contact.html?service=management" class="text-lg font-display font-medium text-on-surface/85 hover:text-primary transition-colors">Full-Service Management</a>
+          <a href="sell.html#valuation" class="text-lg font-display font-medium text-[#3F5B45]/85 hover:text-[#A98158] transition-colors">Property Valuation</a>
+          <a href="contact.html?service=legal" class="text-lg font-display font-medium text-[#3F5B45]/85 hover:text-[#A98158] transition-colors">Legal Advice</a>
+          <a href="contact.html?service=mortgages" class="text-lg font-display font-medium text-[#3F5B45]/85 hover:text-[#A98158] transition-colors">Mortgages</a>
+          <a href="contact.html?service=management" class="text-lg font-display font-medium text-[#3F5B45]/85 hover:text-[#A98158] transition-colors">Full-Service Management</a>
         </div>
       </div>
 
-      <a href="contact.html" class="text-xl font-display font-medium text-on-surface hover:text-primary transition-colors">Contact</a>
+      <a href="contact.html" class="text-xl font-display font-medium text-[#3F5B45] hover:text-[#A98158] transition-colors">Contact</a>
     </div>
   </div>
 
@@ -200,30 +206,53 @@
   <main id="main-content">
 
   <!-- Hero -->
-  <section class="relative h-[100svh] flex items-end pb-24 pt-32">
+  <section class="relative h-[100svh] flex items-end pb-16 lg:pb-20 pt-36">
     <div class="absolute inset-0">
-      <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1920&q=80" alt="Luxury villa with infinity pool overlooking the Mediterranean Sea" class="w-full h-full object-cover">
-      <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80" alt="Contemporary luxury villa with infinity pool at golden hour overlooking the Mediterranean Sea" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/15 to-black/10"></div>
     </div>
     
     <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full">
-      <p class="text-sm font-medium tracking-[0.2em] uppercase text-on-surface/70 mb-4">Est. 2005 — Moraira, Spain</p>
-      <h1 class="font-display text-4xl md:text-[3.25rem] leading-[1.1] font-medium tracking-tight mb-6">
-        Extraordinary Properties<br>
-        on the <span class="italic">Costa Blanca</span>
+      <p class="text-sm font-medium tracking-[0.25em] uppercase text-white/60 mb-5">Est. 2005 — Moraira, Spain</p>
+      <h1 class="font-display text-4xl md:text-[3.5rem] lg:text-[4rem] leading-[1.08] font-medium tracking-tight text-white mb-6 max-w-4xl">
+        Discover Extraordinary Homes Along Spain's<br>
+        <span class="italic text-[#E7DDCF]">Costa Blanca</span>
       </h1>
-      <p class="text-lg text-on-surface/80 max-w-xl mb-10 leading-relaxed">
-        Curated luxury real estate on Spain's most prestigious coast. 
-        Each property, a masterpiece of Mediterranean living.
+      <p class="text-lg md:text-xl text-white/80 max-w-xl mb-10 leading-relaxed">
+        Wake up overlooking the Mediterranean, where exceptional architecture 
+        meets timeless coastal living.
       </p>
       <div class="flex flex-wrap gap-4">
-        <a href="02-luxury-collection.html" class="inline-flex items-center gap-3 px-8 py-4 bg-primary text-on-primary text-sm font-medium tracking-wide uppercase rounded-lg hover:bg-[#235a3a] transition-colors shadow-elevation-1">
+        <a href="02-luxury-collection.html" class="inline-flex items-center gap-3 px-8 py-4 bg-[#3F5B45] text-white text-sm font-medium tracking-wide uppercase rounded-xl hover:bg-[#2e4534] transition-all shadow-lg shadow-black/10 hover:shadow-xl hover:shadow-black/15 hover:-translate-y-0.5">
           <span>Explore Collection</span>
           <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
         </a>
-        <a href="contact.html" class="inline-flex items-center gap-3 px-8 py-4 border border-outline-variant text-on-surface text-sm font-medium tracking-wide uppercase rounded-lg hover:bg-surface-container transition-colors">
-          <span>Book a Consultation</span>
+        <a href="contact.html" class="inline-flex items-center gap-3 px-8 py-4 border-2 border-[#A98158] text-white/95 text-sm font-medium tracking-wide uppercase rounded-xl hover:bg-white/10 hover:border-[#b8946e] transition-all">
+          <span>Book a Private Consultation</span>
         </a>
+      </div>
+      
+      <!-- Trust Bar -->
+      <div class="hidden md:flex items-center gap-10 lg:gap-14 mt-16 pt-8 border-t border-white/15">
+        <div>
+          <p class="font-display text-2xl font-medium text-white">20+</p>
+          <p class="text-xs text-white/50 tracking-[0.15em] uppercase mt-0.5">Years Experience</p>
+        </div>
+        <div class="w-px h-8 bg-white/10"></div>
+        <div>
+          <p class="font-display text-2xl font-medium text-white">1,200+</p>
+          <p class="text-xs text-white/50 tracking-[0.15em] uppercase mt-0.5">Properties Sold</p>
+        </div>
+        <div class="w-px h-8 bg-white/10"></div>
+        <div>
+          <p class="font-display text-2xl font-medium text-white">★★★★★</p>
+          <p class="text-xs text-white/50 tracking-[0.15em] uppercase mt-0.5">Client Satisfaction</p>
+        </div>
+        <div class="w-px h-8 bg-white/10"></div>
+        <div>
+          <p class="font-display text-2xl font-medium text-white">Costa Blanca</p>
+          <p class="text-xs text-white/50 tracking-[0.15em] uppercase mt-0.5">Specialists</p>
+        </div>
       </div>
     </div>
   </section>
@@ -288,20 +317,20 @@
           
           <div class="grid grid-cols-2 gap-8">
             <div>
-              <p class="font-display text-4xl font-medium text-primary mb-2">€2B+</p>
-              <p class="text-sm text-on-surface/60">Total Sales Volume</p>
-            </div>
-            <div>
-              <p class="font-display text-4xl font-medium text-primary mb-2">500+</p>
-              <p class="text-sm text-on-surface/60">Properties Sold</p>
-            </div>
-            <div>
-              <p class="font-display text-4xl font-medium text-primary mb-2">19</p>
+              <p class="font-display text-4xl font-medium text-primary mb-2">20+</p>
               <p class="text-sm text-on-surface/60">Years of Excellence</p>
             </div>
             <div>
-              <p class="font-display text-4xl font-medium text-primary mb-2">98%</p>
+              <p class="font-display text-4xl font-medium text-primary mb-2">1,200+</p>
+              <p class="text-sm text-on-surface/60">Properties Sold</p>
+            </div>
+            <div>
+              <p class="font-display text-4xl font-medium text-primary mb-2">★★★★★</p>
               <p class="text-sm text-on-surface/60">Client Satisfaction</p>
+            </div>
+            <div>
+              <p class="font-display text-4xl font-medium text-primary mb-2">5</p>
+              <p class="text-sm text-on-surface/60">Costa Blanca Offices</p>
             </div>
           </div>
         </div>
