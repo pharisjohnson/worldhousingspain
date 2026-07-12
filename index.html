@@ -216,10 +216,15 @@
         Curated luxury real estate on Spain's most prestigious coast. 
         Each property, a masterpiece of Mediterranean living.
       </p>
-      <a href="#featured" class="inline-flex items-center gap-3 text-sm font-medium tracking-wide uppercase hover:text-primary transition-colors group">
-        <a href="02-luxury-collection.html"><span>Explore Collection</span></a>
-        <span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
-      </a>
+      <div class="flex flex-wrap gap-4">
+        <a href="02-luxury-collection.html" class="inline-flex items-center gap-3 px-8 py-4 bg-primary text-on-primary text-sm font-medium tracking-wide uppercase rounded-lg hover:bg-[#235a3a] transition-colors shadow-elevation-1">
+          <span>Explore Collection</span>
+          <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+        </a>
+        <a href="contact.html" class="inline-flex items-center gap-3 px-8 py-4 border border-outline-variant text-on-surface text-sm font-medium tracking-wide uppercase rounded-lg hover:bg-surface-container transition-colors">
+          <span>Book a Consultation</span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -336,7 +341,7 @@
           <div class="relative aspect-[4/3] bg-surface-container-highest overflow-hidden mb-5">
             <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Las Velas de Guardamar - exclusive villa complex with private pool and Mediterranean garden" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
             <div class="absolute top-4 left-4">
-              <span class="inline-block px-3 py-1.5 text-xs font-medium tracking-wide uppercase bg-primary text-on-primary rounded-full">Featured</span>
+              <span class="inline-block px-3 py-1.5 text-xs font-medium tracking-wide uppercase bg-primary/10 text-primary rounded-full">Featured</span>
             </div>
           </div>
           <p class="text-sm text-on-surface/50 mb-2">Guardamar del Segura</p>
@@ -350,7 +355,7 @@
           <div class="relative aspect-[4/3] bg-surface-container-highest overflow-hidden mb-5">
             <img src="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=800&q=80" alt="Chalet Moraira - Mediterranean villa with private pool and traditional architecture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
             <div class="absolute top-4 left-4">
-              <span class="inline-block px-3 py-1.5 text-xs font-medium tracking-wide uppercase bg-secondary-container text-on-secondary-container rounded-full">Villa</span>
+              <span class="inline-block px-3 py-1.5 text-xs font-medium tracking-wide uppercase bg-primary/10 text-primary rounded-full">Villa</span>
             </div>
           </div>
           <p class="text-sm text-on-surface/50 mb-2">Moraira</p>
@@ -364,7 +369,7 @@
           <div class="relative aspect-[4/3] bg-surface-container-highest overflow-hidden mb-5">
             <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80" alt="Blue Gardens Benijófar - modern apartment complex with communal pool" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
             <div class="absolute top-4 left-4">
-              <span class="inline-block px-3 py-1.5 text-xs font-medium tracking-wide uppercase bg-secondary-container text-on-secondary-container rounded-full">New Listing</span>
+              <span class="inline-block px-3 py-1.5 text-xs font-medium tracking-wide uppercase bg-primary/10 text-primary rounded-full">New Listing</span>
             </div>
           </div>
           <p class="text-sm text-on-surface/50 mb-2">Benijófar</p>
@@ -465,28 +470,167 @@
 
   <!-- Testimonials -->
   <section class="py-24 lg:py-32 bg-surface-container-low">
-    <div class="max-w-4xl mx-auto px-6 lg:px-12 text-center">
-      <p class="text-sm font-medium tracking-[0.2em] uppercase text-on-surface/60 mb-4">Testimonials</p>
-      <h2 class="font-display text-4xl lg:text-5xl font-medium tracking-tight mb-16">
-        Words of <span class="italic">Appreciation</span>
-      </h2>
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="text-center mb-16">
+        <p class="text-sm font-medium tracking-[0.2em] uppercase text-on-surface/60 mb-4">Testimonials</p>
+        <h2 class="font-display text-4xl lg:text-5xl font-medium tracking-tight">
+          Words of <span class="italic">Appreciation</span>
+        </h2>
+      </div>
       
-      <blockquote class="mb-12">
-        <p class="font-display text-2xl lg:text-3xl italic leading-relaxed text-on-surface/90 mb-8">
-          "World Housing Spain didn't just find us a house—they understood the life 
-          we wanted to create. Their knowledge of the Costa Blanca is unmatched, and 
-          their discretion throughout the process was exactly what we needed."
-        </p>
-        <footer class="flex items-center justify-center gap-4">
-          <div class="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center">
-            <span class="font-display text-lg font-medium text-on-primary-container">J&M</span>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <!-- Review 1: Lukas Bartnicki -->
+        <div class="bg-surface p-6 rounded-xl border border-outline-variant/30 text-left flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            </div>
+            <div>
+              <p class="font-medium text-sm">Lukas Bartnicki</p>
+              <p class="text-xs text-on-surface/50">15 reviews · 1 photo</p>
+            </div>
           </div>
-          <div class="text-left">
-            <p class="font-medium">James & Margaret</p>
-            <p class="text-sm text-on-surface/60">Moraira, 2024</p>
+          <div class="flex items-center gap-0.5 mb-3">
+            <span class="material-symbols-outlined text-[16px] text-[#FBBC05]">star</span>
+            <span class="material-symbols-outlined text-[16px] text-[#FBBC05]">star</span>
+            <span class="material-symbols-outlined text-[16px] text-[#FBBC05]">star</span>
+            <span class="material-symbols-outlined text-[16px] text-[#FBBC05]">star</span>
+            <span class="material-symbols-outlined text-[16px] text-[#FBBC05]">star</span>
           </div>
-        </footer>
-      </blockquote>
+          <p class="text-sm text-on-surface/70 leading-relaxed flex-1">"A place to go to if you are interested in buying your dream house! Big shoutout to Damian for his professionalism."</p>
+          <p class="text-xs text-on-surface/40 mt-3">a year ago</p>
+          <div class="mt-3 pt-3 border-t border-outline-variant/20">
+            <p class="text-xs text-on-surface/50 italic">World Housing Spain: "It has been a pleasure, we appreciate your trust and we hope you will be very happy in your new home."</p>
+          </div>
+        </div>
+
+        <!-- Review 2: Ka Wu -->
+        <div class="bg-surface p-6 rounded-xl border border-outline-variant/30 text-left flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            </div>
+            <div>
+              <p class="font-medium text-sm">Ka Wu</p>
+              <p class="text-xs text-on-surface/50">5 reviews</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-0.5 mb-3">
+            <span class="material-symbols-outlined text-[16px] text-[#FBBC05]">star</span>
+            <span class="material-symbols-outlined text-[16px] text-[#FBBC05]">star</span>
+            <span class="material-symbols-outlined text-[16px] text-[#FBBC05]">star</span>
+            <span class="material-symbols-outlined text-[16px] text-[#FBBC05]">star</span>
+            <span class="material-symbols-outlined text-[16px] text-[#FBBC05]">star</span>
+          </div>
+          <p class="text-sm text-on-surface/70 leading-relaxed flex-1">"Very professional and helpful. I recommend!"</p>
+          <p class="text-xs text-on-surface/40 mt-3">a year ago</p>
+          <div class="mt-3 pt-3 border-t border-outline-variant/20">
+            <p class="text-xs text-on-surface/50 italic">World Housing Spain: "We are very grateful that you have taken the time to share your opinion. It is a pleasure dealing with people like you."</p>
+          </div>
+        </div>
+
+        <!-- Review 3: CHILL DEEP HOUSE TROPICAL 2021 -->
+        <div class="bg-surface p-6 rounded-xl border border-outline-variant/30 text-left flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            </div>
+            <div>
+              <p class="font-medium text-sm">CHILL DEEP HOUSE TROPICAL 2021</p>
+              <p class="text-xs text-on-surface/50">Local Guide · 9 reviews · 27 photos</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-0.5 mb-3">
+            <span class="material-symbols-outlined text-[16px] text-[#FBBC05]">star</span>
+            <span class="material-symbols-outlined text-[16px] text-[#FBBC05]">star</span>
+            <span class="material-symbols-outlined text-[16px] text-[#FBBC05]">star</span>
+            <span class="material-symbols-outlined text-[16px] text-[#FBBC05]">star</span>
+            <span class="material-symbols-outlined text-[16px] text-[#FBBC05]">star</span>
+          </div>
+          <p class="text-sm text-on-surface/70 leading-relaxed flex-1">"My house was sold in just 15 days. All the paperwork was very quick and easy, the service was fantastic, and now they're looking for a new house for me. Thank you so much for your dedication to selling so quickly. I highly recommend them!"</p>
+          <p class="text-xs text-on-surface/40 mt-3">a year ago</p>
+          <div class="mt-3 pt-3 border-t border-outline-variant/20">
+            <p class="text-xs text-on-surface/50 italic">World Housing Spain: "Thank you so much for taking the time to write a review. We're glad to hear you enjoyed your experience with us."</p>
+          </div>
+        </div>
+
+        <!-- Review 4: MUSICAPARA -->
+        <div class="bg-surface p-6 rounded-xl border border-outline-variant/30 text-left flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            </div>
+            <div>
+              <p class="font-medium text-sm">MUSICAPARA</p>
+              <p class="text-xs text-on-surface/50">Local Guide · 397 reviews · 9,256 photos</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-0.5 mb-3">
+            <span class="material-symbols-outlined text-[16px] text-[#FBBC05]">star</span>
+            <span class="material-symbols-outlined text-[16px] text-[#FBBC05]">star</span>
+            <span class="material-symbols-outlined text-[16px] text-[#FBBC05]">star</span>
+            <span class="material-symbols-outlined text-[16px] text-[#FBBC05]">star</span>
+            <span class="material-symbols-outlined text-[16px] text-[#FBBC05]">star</span>
+          </div>
+          <p class="text-sm text-on-surface/70 leading-relaxed flex-1">"World Housing Spain is very professional. They were attentive at all times and gave me plenty of options to choose a house. The service was personalized, and thank you so much for making everything so easy. Highly recommended for buying or selling."</p>
+          <p class="text-xs text-on-surface/40 mt-3">a year ago (edited)</p>
+          <div class="mt-3 pt-3 border-t border-outline-variant/20">
+            <p class="text-xs text-on-surface/50 italic">World Housing Spain: "Thank you for your review! We are proud to know that our hard work is paying off."</p>
+          </div>
+        </div>
+
+        <!-- Review 5: Magdalena Cieszynska -->
+        <div class="bg-surface p-6 rounded-xl border border-outline-variant/30 text-left flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            </div>
+            <div>
+              <p class="font-medium text-sm">Magdalena Cieszynska</p>
+              <p class="text-xs text-on-surface/50">2 reviews · 1 photo</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-0.5 mb-3">
+            <span class="material-symbols-outlined text-[16px] text-[#FBBC05]">star</span>
+            <span class="material-symbols-outlined text-[16px] text-[#FBBC05]">star</span>
+            <span class="material-symbols-outlined text-[16px] text-[#FBBC05]">star</span>
+            <span class="material-symbols-outlined text-[16px] text-[#FBBC05]">star</span>
+            <span class="material-symbols-outlined text-[16px] text-[#FBBC05]">star</span>
+          </div>
+          <p class="text-sm text-on-surface/70 leading-relaxed flex-1">"I just bought an apartment with the help of World Housing Spain. Professional approach, top-notch service, and the transaction went very smoothly. I recommend the agency!"</p>
+          <p class="text-xs text-on-surface/40 mt-3">a year ago</p>
+        </div>
+
+        <!-- Review 6: Dominik Pajor -->
+        <div class="bg-surface p-6 rounded-xl border border-outline-variant/30 text-left flex flex-col">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            </div>
+            <div>
+              <p class="font-medium text-sm">Dominik Pajor</p>
+              <p class="text-xs text-on-surface/50">Local Guide · 34 reviews · 3 photos</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-0.5 mb-3">
+            <span class="material-symbols-outlined text-[16px] text-[#FBBC05]">star</span>
+            <span class="material-symbols-outlined text-[16px] text-[#FBBC05]">star</span>
+            <span class="material-symbols-outlined text-[16px] text-[#FBBC05]">star</span>
+            <span class="material-symbols-outlined text-[16px] text-[#FBBC05]">star</span>
+            <span class="material-symbols-outlined text-[16px] text-[#FBBC05]">star</span>
+          </div>
+          <p class="text-sm text-on-surface/70 leading-relaxed flex-1">"Damian, thank you very much, great service, I recommend!"</p>
+          <p class="text-xs text-on-surface/40 mt-3">a year ago</p>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <a href="https://www.google.com/search?client=firefox-b-d&q=world+housing+spain#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-8 py-4 border border-outline-variant text-on-surface text-sm font-medium tracking-wide uppercase rounded-lg hover:bg-surface-container transition-colors group">
+          <svg class="w-5 h-5" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          <span>Write a Review on Google</span>
+          <span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">open_in_new</span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -580,7 +724,7 @@
           <ul class="space-y-3 text-sm text-on-surface/60">
             <li><a href="03-property-listings.html" class="hover:text-primary transition-colors">Buy</a></li>
             <li><a href="sell.html" class="hover:text-primary transition-colors">Sell</a></li>
-            <li><a href="rent.html" class="hover:text-primary transition-colors">Rent</a></li>
+            <li><a href="02-luxury-collection.html" class="hover:text-primary transition-colors">Luxury</a></li>
             <li><a href="projects.html" class="hover:text-primary transition-colors">New Developments</a></li>
           </ul>
         </div>
