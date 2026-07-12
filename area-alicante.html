@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Benissa — World Housing Spain</title>
-  <meta name="description" content="Discover Benissa — the authentic spirit of the Costa Blanca. Historic old town, 4 km coastline, and genuine Spanish character preserved in time. Your complete area guide.">
+  <title>Alicante — World Housing Spain</title>
+  <meta name="description" content="Discover Alicante — the vibrant capital of the Costa Blanca. Urban sophistication, historic Castillo de Santa Bárbara, palm-lined Explanada, and 300+ sunny days a year.">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -74,8 +74,13 @@
   </style>
 </head>
 <body class="font-body bg-surface text-on-surface antialiased">
-  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-on-primary focus:rounded-lg">Skip to main content</a>
-    <!-- Header -->
+
+  <!-- Skip to Content -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-on-primary focus:rounded-lg">
+    Skip to main content
+  </a>
+
+  <!-- Header -->
   <header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-surface-container-low/90 backdrop-blur-md border-b border-outline-variant/50 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <div class="flex items-center justify-between h-20">
@@ -129,7 +134,8 @@
       </div>
     </div>
   </header>
-    <!-- Mobile Nav Overlay -->
+
+  <!-- Mobile Nav Overlay -->
   <div id="mobile-nav" class="fixed inset-0 z-40 bg-surface/95 backdrop-blur-lg hidden" role="dialog" aria-modal="true" aria-label="Mobile navigation">
     <div class="flex flex-col items-center justify-center h-full gap-5 overflow-y-auto py-12">
       <button id="close-mobile-nav" class="absolute top-6 right-6 p-2 text-on-surface" aria-label="Close menu">
@@ -165,27 +171,47 @@
       <a href="contact.html" class="text-xl font-display font-medium text-on-surface hover:text-primary transition-colors">Contact</a>
     </div>
   </div>
+
   <script>
     const mobileNav = document.getElementById('mobile-nav');
     const openBtn = document.getElementById('open-mobile-nav');
     const closeBtn = document.getElementById('close-mobile-nav');
-    function openMenu() { mobileNav.classList.remove('hidden'); openBtn.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; }
-    function closeMenu() { mobileNav.classList.add('hidden'); openBtn.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; }
+    
+    function openMenu() {
+      mobileNav.classList.remove('hidden');
+      openBtn.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeMenu() {
+      mobileNav.classList.add('hidden');
+      openBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+    
     openBtn?.addEventListener('click', openMenu);
     closeBtn?.addEventListener('click', closeMenu);
     mobileNav?.addEventListener('click', (e) => { if (e.target === mobileNav) closeMenu(); });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !mobileNav.classList.contains('hidden')) closeMenu(); });
+
     const header = document.getElementById('site-header');
-    window.addEventListener('scroll', () => { if (window.scrollY > 50) { header.classList.add('shadow-elevation-1'); } else { header.classList.remove('shadow-elevation-1'); } });
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('shadow-elevation-1');
+      } else {
+        header.classList.remove('shadow-elevation-1');
+      }
+    });
   </script>
 
   <main id="main-content" class="pt-20">
     <!-- Hero -->
     <section class="relative h-[80vh] flex items-end pb-20">
       <div class="absolute inset-0">
-        <img src="https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?w=1920&q=80" alt="Benissa old town with historic stone buildings, terracotta roofs, and narrow streets in the Alicante countryside" class="w-full h-full object-cover">
+        <img src="https://images.unsplash.com/photo-1558642084-fd07fae5282e?w=1920&q=80" alt="Aerial view of Alicante city with Castillo de Santa Bárbara, marina, and Mediterranean coastline" class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/30 to-transparent"></div>
       </div>
+      
       <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full">
         <nav class="mb-6" aria-label="Breadcrumb">
           <ol class="flex items-center gap-2 text-sm text-on-surface/60">
@@ -193,12 +219,16 @@
             <li><span class="material-symbols-outlined text-[16px]">chevron_right</span></li>
             <li><a href="05-area-guide.html" class="hover:text-primary transition-colors">Area Guides</a></li>
             <li><span class="material-symbols-outlined text-[16px]">chevron_right</span></li>
-            <li class="text-on-surface font-medium">Benissa</li>
+            <li class="text-on-surface font-medium">Alicante</li>
           </ol>
         </nav>
         <p class="text-sm font-medium tracking-[0.2em] uppercase text-on-surface/70 mb-3">Area Guide</p>
-        <h1 class="font-display text-5xl md:text-7xl font-medium tracking-tight mb-4">Benissa</h1>
-        <p class="text-xl text-on-surface/80 max-w-xl leading-relaxed font-display italic">The Authentic Spirit of the Costa Blanca</p>
+        <h1 class="font-display text-5xl md:text-7xl font-medium tracking-tight mb-4">
+          Alicante
+        </h1>
+        <p class="text-xl text-on-surface/80 max-w-xl leading-relaxed font-display italic">
+          The Provincial Capital
+        </p>
       </div>
     </section>
 
@@ -206,39 +236,27 @@
     <section class="py-20 lg:py-28 bg-surface">
       <div class="max-w-4xl mx-auto px-6 lg:px-12">
         <div class="grid md:grid-cols-3 gap-8 mb-16">
-          <div class="text-center p-6 bg-surface-container-low rounded-xl">
-            <span class="material-symbols-outlined text-primary text-[32px] mb-3">groups</span>
-            <p class="font-display text-2xl font-medium">12,000</p>
-            <p class="text-sm text-on-surface/50">Population</p>
-          </div>
-          <div class="text-center p-6 bg-surface-container-low rounded-xl">
-            <span class="material-symbols-outlined text-primary text-[32px] mb-3">beach_access</span>
-            <p class="font-display text-2xl font-medium">4 km</p>
-            <p class="text-sm text-on-surface/50">of Coastline</p>
-          </div>
-          <div class="text-center p-6 bg-surface-container-low rounded-xl">
-            <span class="material-symbols-outlined text-primary text-[32px] mb-3">account_balance</span>
-            <p class="font-display text-2xl font-medium">S. XIII</p>
-            <p class="text-sm text-on-surface/50">Historic Old Town</p>
-          </div>
+            <div class="text-center p-6 bg-surface-container-low rounded-xl">
+              <span class="material-symbols-outlined text-primary text-[32px] mb-3">groups</span>
+              <p class="font-display text-2xl font-medium">339,000</p>
+              <p class="text-sm text-on-surface/50">Population</p>
+            </div>
+            <div class="text-center p-6 bg-surface-container-low rounded-xl">
+              <span class="material-symbols-outlined text-primary text-[32px] mb-3">sunny</span>
+              <p class="font-display text-2xl font-medium">300+</p>
+              <p class="text-sm text-on-surface/50">Sunny Days per Year</p>
+            </div>
+            <div class="text-center p-6 bg-surface-container-low rounded-xl">
+              <span class="material-symbols-outlined text-primary text-[32px] mb-3">beach_access</span>
+              <p class="font-display text-2xl font-medium">6 km</p>
+              <p class="text-sm text-on-surface/50">Urban Beaches</p>
+            </div>
         </div>
+        
         <div class="text-on-surface/70 leading-relaxed text-lg space-y-6">
-          <p>
-            Benissa is the Costa Blanca as it used to be — unspoiled, unhurried, and 
-            deeply authentic. Unlike its glitzier neighbours, Benissa has preserved its 
-            Spanish soul across centuries. The old town is a treasure trove of Gothic 
-            and Baroque architecture: the 13th-century church tower, stone manor houses 
-            with wrought-iron balconies, and narrow streets that open unexpectedly onto 
-            serene plazas with panoramic views of the Mediterranean.
-          </p>
-          <p>
-            Yet Benissa is not merely a journey into the past. Its coastline — La 
-            Fustera, La Llobella, and L'Advocat — offers some of the most pristine 
-            coves on the Costa Blanca, while the surrounding countryside is dotted 
-            with agricultural fincas producing olive oil, almonds, and grapes. For 
-            buyers seeking a genuine Spanish experience with modern amenities within 
-            reach, Benissa represents remarkable value and character.
-          </p>
+          <p>Alicante is the beating heart of the Costa Blanca — a dynamic, cosmopolitan city where 3,000 years of history meet modern Mediterranean living. The iconic Castillo de Santa Bárbara crowns Mount Benacantil, watching over a city of palm-lined boulevards, Art Nouveau buildings, and one of Spain's most vibrant waterfront promenades.</p>
+          <p>The city offers an exceptional quality of life with world-class infrastructure, international schools, two universities, and a thriving business scene. Its gastronomy is legendary — from Michelin-starred restaurants to traditional tapas bars in the historic Santa Cruz quarter. The nightlife, cultural calendar, and annual Hogueras de San Juan festival rank among Spain's finest.</p>
+          <p>For property buyers, Alicante presents a compelling mix of urban apartments, beachfront residences, and suburban villas — all at more accessible prices than Barcelona or Madrid. The international airport connects to over 100 European destinations, making it a favourite for investors and second-home buyers alike.</p>
         </div>
       </div>
     </section>
@@ -248,50 +266,55 @@
       <div class="max-w-7xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-12">
           <p class="text-sm font-medium tracking-[0.2em] uppercase text-on-surface/60 mb-4">Highlights</p>
-          <h2 class="font-display text-3xl lg:text-4xl font-medium tracking-tight">Life in <span class="italic">Benissa</span></h2>
+          <h2 class="font-display text-3xl lg:text-4xl font-medium tracking-tight">
+            Life in <span class="italic">Alicante</span>
+          </h2>
         </div>
+        
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4 auto-rows-[200px] md:auto-rows-[240px]">
+          <!-- Large feature -->
           <div class="col-span-2 row-span-2 relative rounded-xl overflow-hidden bg-surface-container-highest group">
-            <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=1200&q=80" alt="Benissa old town with historic stone church, traditional Spanish architecture, and terracotta rooftops" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <img src="https://images.unsplash.com/photo-1599376851384-14e69f450b88?w=600&q=80" alt="Castillo de Santa Bárbara" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
             <div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent"></div>
             <div class="absolute bottom-0 left-0 right-0 p-6">
-              <span class="material-symbols-outlined text-primary text-[28px] mb-2">account_balance</span>
-              <h3 class="font-display text-xl font-medium mb-1">Historic Old Town</h3>
-              <p class="text-sm text-on-surface/70">Gothic church, Baroque mansions, hidden plazas, and cobbled streets</p>
+              <span class="material-symbols-outlined text-primary text-[28px] mb-2">museum</span>
+              <h3 class="font-display text-xl font-medium mb-1">Castillo de Santa Bárbara</h3>
+              <p class="text-sm text-on-surface/70">10th-century fortress with panoramic views over the city and bay</p>
             </div>
           </div>
           <div class="relative rounded-xl overflow-hidden bg-surface-container-highest group">
-            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=600&q=80" alt="La Fustera beach in Benissa with crystal-clear water and rocky coastline" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <img src="https://images.unsplash.com/photo-1578895109935-2e1d29c2376f?w=600&q=80" alt="Explanada de España" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4">
+              <span class="material-symbols-outlined text-primary text-[24px] mb-1">directions_walk</span>
+              <h3 class="font-display text-lg font-medium">Explanada de España</h3>
+            </div>
+          </div>
+          <div class="relative rounded-xl overflow-hidden bg-surface-container-highest group">
+            <img src="https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?w=600&q=80" alt="Postiguet Beach" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
             <div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent"></div>
             <div class="absolute bottom-0 left-0 right-0 p-4">
               <span class="material-symbols-outlined text-primary text-[24px] mb-1">beach_access</span>
-              <h3 class="font-display text-lg font-medium">Pristine Coves</h3>
+              <h3 class="font-display text-lg font-medium">Postiguet Beach</h3>
             </div>
           </div>
           <div class="relative rounded-xl overflow-hidden bg-surface-container-highest group">
-            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&q=80" alt="Rural countryside surrounding Benissa with olive groves, almond trees, and Mediterranean hills" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80" alt="Santa Cruz Quarter" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
             <div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent"></div>
             <div class="absolute bottom-0 left-0 right-0 p-4">
-              <span class="material-symbols-outlined text-primary text-[24px] mb-1">agriculture</span>
-              <h3 class="font-display text-lg font-medium">Rural Countryside</h3>
+              <span class="material-symbols-outlined text-primary text-[24px] mb-1">architecture</span>
+              <h3 class="font-display text-lg font-medium">Santa Cruz Quarter</h3>
             </div>
           </div>
           <div class="relative rounded-xl overflow-hidden bg-surface-container-highest group">
-            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80" alt="Traditional Spanish restaurant in Benissa serving authentic Valencian cuisine" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <img src="https://images.unsplash.com/photo-1534628526458-a8de087b1123?w=600&q=80" alt="Alicante Marina" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
             <div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent"></div>
             <div class="absolute bottom-0 left-0 right-0 p-4">
-              <span class="material-symbols-outlined text-primary text-[24px] mb-1">restaurant</span>
-              <h3 class="font-display text-lg font-medium">Traditional Cuisine</h3>
+              <span class="material-symbols-outlined text-primary text-[24px] mb-1">sailing</span>
+              <h3 class="font-display text-lg font-medium">Alicante Marina</h3>
             </div>
           </div>
-          <div class="relative rounded-xl overflow-hidden bg-surface-container-highest group">
-            <img src="https://images.unsplash.com/photo-1474631245212-32dc3c8310c6?w=600&q=80" alt="Ifach golf club near Benissa with views of the Peñón de Ifach and Mediterranean" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-            <div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent"></div>
-            <div class="absolute bottom-0 left-0 right-0 p-4">
-              <span class="material-symbols-outlined text-primary text-[24px] mb-1">golf_course</span>
-              <h3 class="font-display text-lg font-medium">Golf & Leisure</h3>
-            </div>
-          </div>
+
         </div>
       </div>
     </section>
@@ -302,46 +325,24 @@
         <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
           <div>
             <p class="text-sm font-medium tracking-[0.2em] uppercase text-on-surface/60 mb-4">Market Overview</p>
-            <h2 class="font-display text-3xl lg:text-4xl font-medium tracking-tight mb-8">The Benissa <span class="italic">Property Market</span></h2>
+            <h2 class="font-display text-3xl lg:text-4xl font-medium tracking-tight mb-8">
+              The Alicante <span class="italic">Property Market</span>
+            </h2>
             <div class="text-on-surface/70 leading-relaxed space-y-4 mb-10">
-              <p>
-                Benissa offers compelling value compared to its coastal neighbours. 
-                The market is characterised by traditional stone fincas in need of 
-                renovation alongside modern villas in established urbanisations. For 
-                buyers seeking a project — a rustic finca to transform into a dream 
-                home — Benissa's hinterland is one of the last affordable frontiers 
-                on this stretch of coast.
-              </p>
-              <p>
-                The coastal strip, particularly around La Fustera and L'Advocat, 
-                commands higher prices for contemporary villas with sea views. 
-                Benissa's dual character — historic inland town and modern beachfront 
-                — means buyers can choose between authentic village living and 
-                coastal resort-style convenience, often at significantly lower 
-                entry points than nearby Moraira or Jávea.
-              </p>
+              <p>Alicante's property market is one of the most dynamic on the Costa Blanca, driven by strong demand from both domestic buyers and international investors. The city offers a wide range of options, from historic apartments in the city centre to modern developments in growth districts like San Juan Playa and Albufereta.</p>
+              <p>The ongoing urban regeneration of the port area and the expansion of the tram network continue to drive appreciation. Rental yields remain strong thanks to year-round tourism and a growing student population, making Alicante a favourite for buy-to-let investors.</p>
             </div>
+            
             <div class="grid grid-cols-2 gap-6">
-              <div class="p-4 bg-surface-container-low rounded-xl">
-                <p class="text-xs text-on-surface/50 uppercase tracking-wide mb-1">Average Villa Price</p>
-                <p class="font-display text-2xl font-medium">€950K</p>
-              </div>
-              <div class="p-4 bg-surface-container-low rounded-xl">
-                <p class="text-xs text-on-surface/50 uppercase tracking-wide mb-1">Price per m²</p>
-                <p class="font-display text-2xl font-medium">€2,800</p>
-              </div>
-              <div class="p-4 bg-surface-container-low rounded-xl">
-                <p class="text-xs text-on-surface/50 uppercase tracking-wide mb-1">Annual Appreciation</p>
-                <p class="font-display text-2xl font-medium">+6.5%</p>
-              </div>
-              <div class="p-4 bg-surface-container-low rounded-xl">
-                <p class="text-xs text-on-surface/50 uppercase tracking-wide mb-1">Rental Yield</p>
-                <p class="font-display text-2xl font-medium">4-7%</p>
-              </div>
+              <div class="p-4 bg-surface-container-low rounded-xl"><p class="text-xs text-on-surface/50 uppercase tracking-wide mb-1">Average Apartment</p><p class="font-display text-2xl font-medium">€280,000</p></div>
+              <div class="p-4 bg-surface-container-low rounded-xl"><p class="text-xs text-on-surface/50 uppercase tracking-wide mb-1">Price per m²</p><p class="font-display text-2xl font-medium">€2,400</p></div>
+              <div class="p-4 bg-surface-container-low rounded-xl"><p class="text-xs text-on-surface/50 uppercase tracking-wide mb-1">Annual Appreciation</p><p class="font-display text-2xl font-medium">+6.8%</p></div>
+              <div class="p-4 bg-surface-container-low rounded-xl"><p class="text-xs text-on-surface/50 uppercase tracking-wide mb-1">Rental Yield</p><p class="font-display text-2xl font-medium">5–7%</p></div>
             </div>
           </div>
+          
           <div class="relative aspect-[4/5] bg-surface-container-highest overflow-hidden rounded-xl">
-            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1000&q=80" alt="Renovated stone finca in Benissa with traditional architecture, pool, and Mediterranean garden" class="w-full h-full object-cover">
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80" alt="Property in Alicante" class="w-full h-full object-cover">
           </div>
         </div>
       </div>
@@ -352,54 +353,52 @@
       <div class="max-w-7xl mx-auto px-6 lg:px-12">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
-            <p class="text-sm font-medium tracking-[0.2em] uppercase text-on-surface/60 mb-4">Featured in Benissa</p>
-            <h2 class="font-display text-3xl lg:text-4xl font-medium tracking-tight">Available <span class="italic">Properties</span></h2>
+            <p class="text-sm font-medium tracking-[0.2em] uppercase text-on-surface/60 mb-4">Featured in Alicante</p>
+            <h2 class="font-display text-3xl lg:text-4xl font-medium tracking-tight">
+              Available <span class="italic">Properties</span>
+            </h2>
           </div>
           <a href="03-property-listings.html" class="inline-flex items-center gap-3 text-sm font-medium tracking-wide uppercase hover:text-primary transition-colors group mt-6 md:mt-0">
-            <span>View All Benissa Properties</span>
+            <span>View All Properties</span>
             <span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </a>
         </div>
+        
         <div class="grid md:grid-cols-3 gap-6">
           <article class="group bg-surface-container rounded-xl overflow-hidden hover:shadow-elevation-2 transition-shadow">
             <div class="relative aspect-[4/3] overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=600&q=80" alt="Traditional finca in Benissa with stone walls and Mediterranean garden" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-              <div class="absolute top-3 left-3">
-                <span class="inline-block px-2.5 py-1 text-[10px] font-medium tracking-wide uppercase bg-primary text-on-primary rounded-full">Renovated</span>
-              </div>
+              <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80" alt="Urban Penthouse Alicante" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
             </div>
             <div class="p-5">
-              <p class="text-xs text-on-surface/50 mb-1.5">Benissa</p>
-              <h3 class="font-display text-lg font-medium mb-2 group-hover:text-primary transition-colors"><a href="04-property-detail.html" class="hover:text-primary">Finca Rosa</a></h3>
-              <p class="text-xs text-on-surface/60 mb-3">4 Bed · 3 Bath · 320 m² · Pool</p>
-              <p class="font-display text-lg font-medium">€1,250,000</p>
+              <p class="text-xs text-on-surface/50 mb-1.5">Alicante Centre</p>
+              <h3 class="font-display text-lg font-medium mb-2 group-hover:text-primary transition-colors">Urban Penthouse Alicante</h3>
+              <p class="text-xs text-on-surface/60 mb-3">3 Bed · 2 Bath · 120 m²</p>
+              <p class="font-display text-lg font-medium">€495,000</p>
             </div>
           </article>
           <article class="group bg-surface-container rounded-xl overflow-hidden hover:shadow-elevation-2 transition-shadow">
             <div class="relative aspect-[4/3] overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80" alt="Modern villa in Benissa with sea views, infinity pool, and contemporary architecture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80" alt="Beachfront Apartment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
             </div>
             <div class="p-5">
-              <p class="text-xs text-on-surface/50 mb-1.5">La Fustera, Benissa</p>
-              <h3 class="font-display text-lg font-medium mb-2 group-hover:text-primary transition-colors"><a href="04-property-detail.html" class="hover:text-primary">Vista Benissa</a></h3>
-              <p class="text-xs text-on-surface/60 mb-3">3 Bed · 2 Bath · 240 m² · Sea Views</p>
-              <p class="font-display text-lg font-medium">€795,000</p>
+              <p class="text-xs text-on-surface/50 mb-1.5">San Juan Playa</p>
+              <h3 class="font-display text-lg font-medium mb-2 group-hover:text-primary transition-colors">Beachfront Apartment</h3>
+              <p class="text-xs text-on-surface/60 mb-3">2 Bed · 2 Bath · 85 m²</p>
+              <p class="font-display text-lg font-medium">€325,000</p>
             </div>
           </article>
           <article class="group bg-surface-container rounded-xl overflow-hidden hover:shadow-elevation-2 transition-shadow">
             <div class="relative aspect-[4/3] overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Country estate in Benissa with olive groves, traditional stone buildings, and panoramic mountain views" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-              <div class="absolute top-3 left-3">
-                <span class="inline-block px-2.5 py-1 text-[10px] font-medium tracking-wide uppercase bg-secondary-container text-on-secondary-container rounded-full">Exclusive</span>
-              </div>
+              <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&q=80" alt="Villa with Sea Views" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
             </div>
             <div class="p-5">
-              <p class="text-xs text-on-surface/50 mb-1.5">Benissa</p>
-              <h3 class="font-display text-lg font-medium mb-2 group-hover:text-primary transition-colors"><a href="04-property-detail.html" class="hover:text-primary">Casa Abuela</a></h3>
-              <p class="text-xs text-on-surface/60 mb-3">5 Bed · 3 Bath · 450 m² · 6,000 m² Plot</p>
-              <p class="font-display text-lg font-medium">€1,680,000</p>
+              <p class="text-xs text-on-surface/50 mb-1.5">Albufereta</p>
+              <h3 class="font-display text-lg font-medium mb-2 group-hover:text-primary transition-colors">Villa with Sea Views</h3>
+              <p class="text-xs text-on-surface/60 mb-3">4 Bed · 3 Bath · 250 m²</p>
+              <p class="font-display text-lg font-medium">€890,000</p>
             </div>
           </article>
+
         </div>
       </div>
     </section>
@@ -408,27 +407,29 @@
     <section class="py-24 lg:py-32 bg-surface">
       <div class="max-w-4xl mx-auto px-6 lg:px-12 text-center">
         <p class="text-sm font-medium tracking-[0.2em] uppercase text-on-surface/60 mb-4">Get in Touch</p>
-        <h2 class="font-display text-4xl lg:text-5xl font-medium tracking-tight mb-6">Discover <span class="italic">Benissa</span></h2>
+        <h2 class="font-display text-4xl lg:text-5xl font-medium tracking-tight mb-6">
+          Discover <span class="italic">Alicante</span>
+        </h2>
         <p class="text-on-surface/70 leading-relaxed mb-10 text-lg max-w-2xl mx-auto">
-          Whether you seek a rustic finca to restore or a modern coastal villa, 
-          Benissa offers authentic Spanish living at remarkable value. Let our 
-          experts guide you to the perfect property.
+          Whether you're looking for a permanent residence, a holiday retreat, 
+          or an investment opportunity, our team is ready to guide you 
+          to the perfect property.
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a href="contact.html" class="inline-flex items-center gap-3 px-8 py-4 bg-primary text-on-primary font-medium tracking-wide uppercase hover:bg-primary/90 transition-colors rounded-lg">
             <span>Schedule a Viewing</span>
             <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
           </a>
-          <a href="03-property-listings.html" class="inline-flex items-center gap-3 px-8 py-4 border border-outline-variant text-on-surface font-medium tracking-wide uppercase hover:bg-surface-container transition-colors rounded-lg">
-            <span>Browse Benissa Properties</span>
-            <span class="material-symbols-outlined text-[20px]">search</span>
+          <a href="05-area-guide.html" class="inline-flex items-center gap-3 px-8 py-4 border border-outline-variant text-on-surface font-medium tracking-wide uppercase hover:bg-surface-container transition-colors rounded-lg">
+            <span>Explore All Areas</span>
+            <span class="material-symbols-outlined text-[20px]">map</span>
           </a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="py-16 bg-surface-container-low border-t border-outline-variant/50">
+<footer class="py-16 bg-surface-container-low border-t border-outline-variant/50">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
         <div>
