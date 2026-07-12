@@ -101,40 +101,58 @@
   </a>
 
   <!-- Header -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-low/90 backdrop-blur-md border-b border-outline-variant/50">
+    <!-- Header -->
+  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-surface-container-low/90 backdrop-blur-md border-b border-outline-variant/50 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
         <a href="index.html" class="flex-shrink-0">
           <img src="https://worldhousingspain.eu/wp-content/uploads/2024/09/whs-logo-retina-500.png" alt="World Housing Spain" class="h-12 w-auto brightness-0">
         </a>
         
-        <nav class="hidden md:flex items-center gap-10">
-          <a href="03-property-listings.html" class="text-sm font-medium tracking-wide uppercase text-primary">Buy</a>
-          <a href="sell.html" class="text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors">Sell</a>
-          <a href="rent.html" class="text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors">Rent</a>
-          <a href="projects.html" class="text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors">Projects</a>
-          <a href="about.html" class="text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors">About</a>
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
+          <a href="index.html" class="text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors">Home</a>
+          <a href="about.html" class="text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors">About Us</a>
           
+          <!-- Buy Dropdown -->
+          <div class="relative group py-2">
+            <button class="flex items-center gap-1 text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors focus:outline-none">
+              <span>Buy</span>
+              <span class="material-symbols-outlined text-[16px]">expand_more</span>
+            </button>
+            <div class="absolute left-0 mt-2 w-48 bg-surface-container-low border border-outline-variant/50 rounded-lg shadow-elevation-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-2">
+              <a href="projects.html" class="block px-4 py-2 text-sm text-on-surface/85 hover:bg-surface-container hover:text-primary transition-colors">New Builds</a>
+              <a href="03-property-listings.html" class="block px-4 py-2 text-sm text-on-surface/85 hover:bg-surface-container hover:text-primary transition-colors">Resale Properties</a>
+            </div>
+          </div>
+
+          <a href="sell.html" class="text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors">Sell</a>
+          <a href="02-luxury-collection.html" class="text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors">Luxury</a>
+          <a href="05-area-guide.html" class="text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors">Areas</a>
+          
+          <!-- Services Dropdown -->
+          <div class="relative group py-2">
+            <button class="flex items-center gap-1 text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors focus:outline-none">
+              <span>Services</span>
+              <span class="material-symbols-outlined text-[16px]">expand_more</span>
+            </button>
+            <div class="absolute left-0 mt-2 w-56 bg-surface-container-low border border-outline-variant/50 rounded-lg shadow-elevation-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-2">
+              <a href="sell.html#valuation" class="block px-4 py-2 text-sm text-on-surface/85 hover:bg-surface-container hover:text-primary transition-colors">Property Valuation</a>
+              <a href="contact.html?service=legal" class="block px-4 py-2 text-sm text-on-surface/85 hover:bg-surface-container hover:text-primary transition-colors">Legal Advice</a>
+              <a href="contact.html?service=mortgages" class="block px-4 py-2 text-sm text-on-surface/85 hover:bg-surface-container hover:text-primary transition-colors">Mortgages</a>
+              <a href="contact.html?service=management" class="block px-4 py-2 text-sm text-on-surface/85 hover:bg-surface-container hover:text-primary transition-colors">Full-Service Management</a>
+            </div>
+          </div>
+
           <a href="contact.html" class="text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors">Contact</a>
         </nav>
         
-        <button id="mobile-menu-btn" class="md:hidden p-2 text-on-surface" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <!-- Mobile Menu Button -->
+        <button id="open-mobile-nav" class="md:hidden p-2 text-on-surface" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
           <span class="material-symbols-outlined text-[28px]">menu</span>
         </button>
       </div>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-surface-container-low border-t border-outline-variant/50">
-      <nav class="max-w-7xl mx-auto px-6 py-6 flex flex-col gap-4">
-        <a href="#" class="text-sm font-medium tracking-wide uppercase text-primary py-2">Buy</a>
-        <a href="#" class="text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors py-2">Sell</a>
-        <a href="#" class="text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors py-2">Rent</a>
-        <a href="#" class="text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors py-2">Projects</a>
-        <a href="#" class="text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors py-2">About</a>
-        <a href="#" class="text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors py-2">Magazine</a>
-        <a href="#" class="text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors py-2">Contact</a>
-      </nav>
     </div>
   </header>
 
@@ -470,6 +488,13 @@
       gridViewBtn.classList.add('border-outline-variant');
     });
   </script>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/34633754809" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-elevation-3 hover:scale-110 transition-transform duration-300" aria-label="Contact us on WhatsApp">
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.739-1.458L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.013-5.101-2.859-6.953C16.578 1.999 14.118.99 11.998.99c-5.441 0-9.866 4.372-9.87 9.802 0 1.714.473 3.391 1.369 4.869L2.512 21.99l6.135-1.836zM18.254 14.91c-.344-.173-2.035-1.004-2.348-1.118-.314-.115-.543-.173-.77.173-.228.347-.88 1.118-1.079 1.35-.198.232-.397.26-.74.088-.344-.173-1.45-.535-2.762-1.706-1.02-1.018-1.708-2.276-1.908-2.623-.198-.347-.021-.534.152-.706.156-.155.344-.36.516-.54.172-.18.229-.304.344-.508.115-.203.057-.383-.028-.556-.086-.173-.771-1.854-1.056-2.057-.278-.2-.56-.172-.77-.162-.198.009-.427.013-.656.013-.23 0-.602.087-.917.43-.314.343-1.199 1.15-1.199 2.802 0 1.652 1.2 3.25 1.369 3.48.17.23 2.362 3.633 5.722 5.093.801.348 1.424.555 1.912.712.805.257 1.537.221 2.115.141.644-.089 2.035-.83 2.319-1.63.284-.8 2.84-3.525.17-1.15z"/>
+    </svg>
+  </a>
 
 </body>
 </html>
