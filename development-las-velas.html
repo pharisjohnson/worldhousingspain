@@ -267,69 +267,84 @@
       }
     });
   </script>
-
   <main id="main-content" class="pt-20">
-    <!-- Breadcrumb -->
     <nav class="max-w-7xl mx-auto px-6 lg:px-12 py-4" aria-label="Breadcrumb">
       <ol class="flex items-center gap-2 text-sm text-on-surface/50">
         <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
         <li><span class="material-symbols-outlined text-[16px]">chevron_right</span></li>
-        <li><a href="03-property-listings.html" class="hover:text-primary transition-colors">Buy</a></li>
+        <li><a href="projects.html" class="hover:text-primary transition-colors">New Developments</a></li>
         <li><span class="material-symbols-outlined text-[16px]">chevron_right</span></li>
-        <li><span class="hover:text-primary transition-colors">Santa Pola</span></li>
-        <li><span class="material-symbols-outlined text-[16px]">chevron_right</span></li>
-        <li class="text-on-surface font-medium">Las Velas</li>
+        <li class="text-on-surface font-medium">Penthouse Las Velas</li>
       </ol>
     </nav>
-
-    <!-- Gallery Grid -->
-    <section class="max-w-7xl mx-auto px-6 lg:px-12 mb-12">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 auto-rows-[200px] md:auto-rows-[250px]">
-        <div class="gallery-item relative rounded-xl overflow-hidden bg-surface-container-highest group cursor-pointer">
-          <img src="https://worldhousingspain.eu/wp-content/uploads/2026/03/las-velas-11.jpg" alt="Las Velas - beachfront apartment exterior with Mediterranean views" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-          <div class="absolute inset-0 bg-surface/10 group-hover:bg-transparent transition-colors"></div>
-        </div>
-        <div class="gallery-item relative rounded-xl overflow-hidden bg-surface-container-highest group cursor-pointer">
-          <img src="https://worldhousingspain.eu/wp-content/uploads/2026/03/las-velas-26.jpg" alt="Open-plan living area with premium finishes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-          <div class="absolute inset-0 bg-surface/10 group-hover:bg-transparent transition-colors"></div>
-        </div>
-        <div class="gallery-item relative rounded-xl overflow-hidden bg-surface-container-highest group cursor-pointer">
-          <img src="https://worldhousingspain.eu/wp-content/uploads/2026/03/las-velas-38.jpg" alt="Kitchen with Italian marble countertops and wood accents" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-          <div class="absolute inset-0 bg-surface/10 group-hover:bg-transparent transition-colors"></div>
-        </div>
-        <div class="gallery-item relative rounded-xl overflow-hidden bg-surface-container-highest group cursor-pointer">
-          <img src="https://worldhousingspain.eu/wp-content/uploads/2026/03/las-velas-30.jpg" alt="Master bedroom with premium finishes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-          <div class="absolute inset-0 bg-surface/10 group-hover:bg-transparent transition-colors"></div>
-        </div>
-        <div class="gallery-item relative rounded-xl overflow-hidden bg-surface-container-highest group cursor-pointer">
-          <img src="https://worldhousingspain.eu/wp-content/uploads/2026/03/las-velas-12.jpg" alt="Terrace with natural stone and electric awnings" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-          <div class="absolute inset-0 bg-surface/10 group-hover:bg-transparent transition-colors"></div>
+    <!-- Hero -->
+    <section class="relative py-24 lg:py-32 bg-surface-container-low overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1800&q=80" alt="Penthouse Las Velas development in Santa Pola with rooftop terraces" class="w-full h-full object-cover opacity-20">
+      </div>
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+        <div class="max-w-2xl">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-sm font-medium tracking-[0.2em] uppercase text-on-surface/60">New Development</span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-medium tracking-wide uppercase bg-primary text-on-primary rounded-full">
+              <span class="w-1.5 h-1.5 bg-on-primary rounded-full animate-pulse"></span>
+              Off-Plan
+            </span>
+          </div>
+          <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight mb-4">
+            Penthouse Las Velas
+          </h1>
+          <p class="text-lg text-on-surface/60 flex items-center gap-2 mb-6">
+            <span class="material-symbols-outlined text-[20px]">location_on</span>
+            Santa Pola, El Baix Vinalopó, Alicante
+          </p>
+          <div class="flex flex-wrap gap-6 mb-8">
+            <div>
+              <p class="font-display text-2xl font-medium">From €259,000</p>
+              <p class="text-xs text-on-surface/50">€2,643/m² · Ref: WHS-LV-2026-002</p>
+            </div>
+            <div class="w-px bg-outline-variant/50 hidden sm:block"></div>
+            <div>
+              <p class="font-display text-2xl font-medium">Q4 2026</p>
+              <p class="text-xs text-on-surface/50">Estimated Completion</p>
+            </div>
+          </div>
+          <a href="#inquiry" class="inline-flex items-center gap-3 px-8 py-4 bg-primary text-on-primary text-sm font-medium tracking-wide uppercase rounded-lg hover:bg-[#235a3a] transition-colors shadow-elevation-1">
+            <span>Request Information</span>
+            <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+          </a>
         </div>
       </div>
-      <button class="mt-4 inline-flex items-center gap-2 text-sm font-medium text-on-surface/70 hover:text-primary transition-colors">
-        <span class="material-symbols-outlined text-[18px]">photo_library</span>
-        View all 12 photos
-      </button>
     </section>
 
-    <!-- Property Details Grid -->
+    <!-- Gallery Section -->
+    <section class="py-16 bg-surface">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 mb-12">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 auto-rows-[200px] md:auto-rows-[250px]">
+          <div class="relative rounded-xl overflow-hidden bg-surface-container-highest group md:col-span-2 md:row-span-2">
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80" alt="Penthouse Las Velas — rooftop terrace with panoramic sea views" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          </div>
+          <div class="relative rounded-xl overflow-hidden bg-surface-container-highest group">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80" alt="Open-plan living and dining area with modern design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          </div>
+          <div class="relative rounded-xl overflow-hidden bg-surface-container-highest group">
+            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80" alt="Contemporary kitchen with island and sea views" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          </div>
+          <div class="relative rounded-xl overflow-hidden bg-surface-container-highest group">
+            <img src="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=800&q=80" alt="Master bedroom with en-suite bathroom and terrace access" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          </div>
+          <div class="relative rounded-xl overflow-hidden bg-surface-container-highest group">
+            <img src="https://images.unsplash.com/photo-1600573472556-5e0f4e9a88fa?w=800&q=80" alt="Santa Pola coastline view from rooftop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Details Grid -->
     <section class="max-w-7xl mx-auto px-6 lg:px-12 mb-16">
       <div class="grid lg:grid-cols-3 gap-12 lg:gap-16">
-        <!-- Main Content (2/3) -->
+        <!-- Main Content -->
         <div class="lg:col-span-2">
-          <!-- Title -->
-          <div class="mb-8">
-            <div class="flex flex-wrap items-center gap-3 mb-3">
-              <span class="inline-block px-3 py-1 text-xs font-medium tracking-wide uppercase bg-primary/10 text-primary rounded-full">Exclusive</span>
-              <span class="inline-block px-3 py-1 text-xs font-medium tracking-wide uppercase bg-secondary-container text-on-secondary-container rounded-full">On Sale</span>
-            </div>
-            <h1 class="font-display text-4xl md:text-5xl font-medium tracking-tight mb-3">Las Velas</h1>
-            <p class="text-on-surface/60 flex items-center gap-2">
-              <span class="material-symbols-outlined text-[18px]">location_on</span>
-              Santa Pola, El Baix Vinalopó, Alicante, 03130, Spain
-            </p>
-          </div>
-          
           <!-- Key Stats -->
           <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 pb-10 border-b border-outline-variant/50">
             <div class="text-center p-4 bg-surface-container-low rounded-xl">
@@ -344,154 +359,133 @@
             </div>
             <div class="text-center p-4 bg-surface-container-low rounded-xl">
               <span class="material-symbols-outlined text-primary text-[24px] mb-1">square_foot</span>
-              <p class="font-display text-2xl font-medium">162</p>
+              <p class="font-display text-2xl font-medium">98–120</p>
               <p class="text-xs text-on-surface/50 uppercase tracking-wide">m² Built</p>
             </div>
             <div class="text-center p-4 bg-surface-container-low rounded-xl">
-              <span class="material-symbols-outlined text-primary text-[24px] mb-1">landscape</span>
-              <p class="font-display text-2xl font-medium">123</p>
-              <p class="text-xs text-on-surface/50 uppercase tracking-wide">m² Living</p>
+              <span class="material-symbols-outlined text-primary text-[24px] mb-1">apartment</span>
+              <p class="font-display text-2xl font-medium">24</p>
+              <p class="text-xs text-on-surface/50 uppercase tracking-wide">Units</p>
             </div>
           </div>
           
           <!-- Description -->
           <div class="mb-10">
-            <h2 class="font-display text-2xl font-medium mb-4">About This Property</h2>
+            <h2 class="font-display text-2xl font-medium mb-4">About This Development</h2>
             <div class="text-on-surface/70 leading-relaxed space-y-4">
-              <p>
-                Exclusive Beachfront Apartment: Luxury, Design and Endless Mediterranean Views
-              </p>
-              <p>
-                Discover a true real estate masterpiece: a property that perfectly blends contemporary elegance, a prime beachfront location, and the finest high-end finishes. Built in 2019 and presented in impeccable condition, ready to move in, this spectacular residence is offered fully furnished with carefully selected wood and leather pieces that bring warmth, refinement, and understated sophistication to every space.
-              </p>
-              <p>
-                With 162 m² built area and 123 m² of living space, the apartment offers exceptional natural light, generous proportions, and a thoughtfully designed layout for effortless daily comfort.
-              </p>
-              <p>
-                Beachfront, Southeast facing — Wake up to unforgettable sunrises and enjoy magnificent natural light throughout the day. The expansive terrace overlooking the sea, clad in natural stone and equipped with electric awnings, offers uninterrupted panoramic views.
-              </p>
-              <p>
-                Extended and Redesigned Kitchen — The kitchen has been enlarged from its original layout to create a more spacious and highly functional culinary space. It features high-end Siemens and Bosch appliances, exquisite Italian marble countertops, and elegant wood accents.
-              </p>
-              <p>
-                Private Bedrooms — Three spacious bedrooms and two full bathrooms, all with premium finishes and refined design details.
-              </p>
+              <p>Penthouse Las Velas is an exclusive collection of 24 penthouses in the heart of Santa Pola, one of the Costa Blanca's most beloved coastal towns. Each home is designed to maximise the Mediterranean lifestyle with expansive rooftop terraces, open-plan living, and breathtaking sea views.</p>
+              <p>The architecture draws inspiration from traditional Mediterranean design — whitewashed volumes, natural stone accents, and large glass openings that dissolve the boundary between indoors and out. Interiors are finished to an impeccable standard: porcelain tile floors, fully equipped kitchens with premium appliances, and sleek contemporary bathrooms.</p>
+              <p>Every penthouse features a private rooftop terrace ranging from 30 to 60 m², perfect for alfresco dining, sunbathing, or simply watching the sunset over the Mediterranean. The top-floor units offer panoramic 360-degree views of the coastline and the nearby Santa Pola salt flats — a protected natural park.</p>
+              <p>The development includes landscaped communal areas, a rooftop infinity pool, and underground parking. Santa Pola's sandy beaches, marina, restaurants, and shops are all within a short walk. Alicante Airport is a convenient 15-minute drive.</p>
             </div>
           </div>
           
           <!-- Features -->
           <div class="mb-10">
-            <h2 class="font-display text-2xl font-medium mb-6">Property Features</h2>
+            <h2 class="font-display text-2xl font-medium mb-6">Development Features</h2>
             <div class="grid md:grid-cols-2 gap-4">
               <div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
-                <span class="material-symbols-outlined text-primary text-[20px]">floor</span>
-                <span class="text-sm">Porcelanosa Porcelain Tile Flooring</span>
+                <span class="material-symbols-outlined text-primary text-[20px]">roof</span>
+                <span class="text-sm">Private Rooftop Terrace (30–60 m²)</span>
               </div>
               <div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
-                <span class="material-symbols-outlined text-primary text-[20px]">ac_unit</span>
-                <span class="text-sm">Central Air Conditioning</span>
-              </div>
-              <div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
-                <span class="material-symbols-outlined text-primary text-[20px]">thermostat</span>
-                <span class="text-sm">Central Heating</span>
-              </div>
-              <div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
-                <span class="material-symbols-outlined text-primary text-[20px]">open_in_new</span>
-                <span class="text-sm">Electric Windows with Remote Control</span>
-              </div>
-              <div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
-                <span class="material-symbols-outlined text-primary text-[20px]">security</span>
-                <span class="text-sm">Iron Doors</span>
-              </div>
-              <div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
-                <span class="material-symbols-outlined text-primary text-[20px]">lock</span>
-                <span class="text-sm">Reinforced Main Entrance Door</span>
-              </div>
-              <div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
-                <span class="material-symbols-outlined text-primary text-[20px]">bug_report</span>
-                <span class="text-sm">Mosquito Nets Throughout</span>
-              </div>
-              <div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
-                <span class="material-symbols-outlined text-primary text-[20px]">light</span>
-                <span class="text-sm">Recessed Lighting</span>
-              </div>
-              <div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
-                <span class="material-symbols-outlined text-primary text-[20px]">umbrella</span>
-                <span class="text-sm">Electric Awnings on Terrace</span>
-              </div>
-              <div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
-                <span class="material-symbols-outlined text-primary text-[20px]">shield</span>
-                <span class="text-sm">24/7 Security</span>
-              </div>
-              <div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
-                <span class="material-symbols-outlined text-primary text-[20px]">alarm</span>
-                <span class="text-sm">Alarm System</span>
-              </div>
-              <div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
-                <span class="material-symbols-outlined text-primary text-[20px]">elevator</span>
-                <span class="text-sm">Elevator</span>
-              </div>
-              <div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
-                <span class="material-symbols-outlined text-primary text-[20px]">inventory_2</span>
-                <span class="text-sm">Storage Room on Ground Floor</span>
+                <span class="material-symbols-outlined text-primary text-[20px]">pool</span>
+                <span class="text-sm">Rooftop Infinity Pool</span>
               </div>
               <div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
                 <span class="material-symbols-outlined text-primary text-[20px]">local_parking</span>
-                <span class="text-sm">Private Parking Space (5 min away)</span>
+                <span class="text-sm">Underground Parking Included</span>
+              </div>
+              <div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
+                <span class="material-symbols-outlined text-primary text-[20px]">inventory_2</span>
+                <span class="text-sm">Storage Room</span>
+              </div>
+              <div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
+                <span class="material-symbols-outlined text-primary text-[20px]">floor</span>
+                <span class="text-sm">Porcelain Tile Flooring Throughout</span>
+              </div>
+              <div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
+                <span class="material-symbols-outlined text-primary text-[20px]">kitchen</span>
+                <span class="text-sm">Fitted Kitchen with Premium Appliances</span>
+              </div>
+              <div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
+                <span class="material-symbols-outlined text-primary text-[20px]">ac_unit</span>
+                <span class="text-sm">Pre-installation for A/C & Heating</span>
+              </div>
+              <div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
+                <span class="material-symbols-outlined text-primary text-[20px]">balcony</span>
+                <span class="text-sm">Floor-to-Ceiling Windows</span>
+              </div>
+              <div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
+                <span class="material-symbols-outlined text-primary text-[20px]">security</span>
+                <span class="text-sm">Video Intercom & Security System</span>
+              </div>
+              <div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
+                <span class="material-symbols-outlined text-primary text-[20px]">landscape</span>
+                <span class="text-sm">Communal Landscaped Gardens</span>
+              </div>
+              <div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
+                <span class="material-symbols-outlined text-primary text-[20px]">directions_car</span>
+                <span class="text-sm">15 min to Alicante Airport</span>
+              </div>
+              <div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
+                <span class="material-symbols-outlined text-primary text-[20px]">beach</span>
+                <span class="text-sm">300 m to Sandy Beaches</span>
               </div>
             </div>
           </div>
           
-          <!-- Location Map -->
+          <!-- Location -->
           <div class="mb-10">
-            <h2 class="font-display text-2xl font-medium mb-6">Location</h2>
-            <div class="map-container rounded-xl h-[300px] flex items-center justify-center">
-              <div class="map-pin z-10">
-                <span class="material-symbols-outlined">home</span>
+            <h2 class="font-display text-2xl font-medium mb-6">Location &amp; Surroundings</h2>
+            <div class="map-container rounded-xl h-[300px] flex items-center justify-center" style="background:linear-gradient(135deg, #ede7db 0%, #dfd9cd 100%);position:relative;overflow:hidden;">
+              <div style="position:absolute;inset:0;background-image:linear-gradient(var(--md-sys-color-outline-variant) 1px, transparent 1px),linear-gradient(90deg, var(--md-sys-color-outline-variant) 1px, transparent 1px);background-size:40px 40px;opacity:0.5;"></div>
+              <div class="z-10" style="width:40px;height:40px;background:var(--md-sys-color-secondary);border-radius:50% 50% 50% 0;transform:rotate(-45deg);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,0.2);">
+                <span class="material-symbols-outlined" style="transform:rotate(45deg);color:white;font-size:20px;">home</span>
               </div>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
               <div class="text-center p-3">
-                <p class="font-display text-xl font-medium text-primary">Beachfront</p>
-                <p class="text-xs text-on-surface/50">Direct Access</p>
+                <p class="font-display text-xl font-medium text-primary">300 m</p>
+                <p class="text-xs text-on-surface/50">Sandy Beaches</p>
               </div>
               <div class="text-center p-3">
                 <p class="font-display text-xl font-medium text-primary">5 min</p>
-                <p class="text-xs text-on-surface/50">to Town Center</p>
-              </div>
-              <div class="text-center p-3">
-                <p class="font-display text-xl font-medium text-primary">25 min</p>
-                <p class="text-xs text-on-surface/50">to Alicante Airport</p>
+                <p class="text-xs text-on-surface/50">Marina & Restaurants</p>
               </div>
               <div class="text-center p-3">
                 <p class="font-display text-xl font-medium text-primary">15 min</p>
-                <p class="text-xs text-on-surface/50">to Golf Course</p>
+                <p class="text-xs text-on-surface/50">Alicante Airport</p>
+              </div>
+              <div class="text-center p-3">
+                <p class="font-display text-xl font-medium text-primary">10 min</p>
+                <p class="text-xs text-on-surface/50">Santa Pola Salt Flats</p>
               </div>
             </div>
           </div>
         </div>
         
-        <!-- Sticky Sidebar (1/3) -->
+        <!-- Sidebar -->
         <div class="lg:col-span-1">
           <div class="lg:sticky lg:top-28">
-            <!-- Price Card -->
-            <div class="bg-surface-container-low p-6 rounded-xl mb-6 border border-outline-variant/30">
-              <p class="font-display text-3xl font-medium mb-1">€850,000</p>
-              <p class="text-sm text-on-surface/50 mb-6">€5,247/m² · Ref: RH-7830-property</p>
+            <!-- Price & Inquiry -->
+            <div id="inquiry" class="bg-surface-container-low p-6 rounded-xl mb-6 border border-outline-variant/30">
+              <p class="font-display text-3xl font-medium mb-1">From €259,000</p>
+              <p class="text-sm text-on-surface/50 mb-6">€2,643/m² · Ref: WHS-LV-2026-002</p>
               
-              <form class="space-y-4" id="inquiry-form">
+              <form class="space-y-4">
                 <h3 class="font-display text-lg font-medium">Request Information</h3>
                 <div class="grid grid-cols-2 gap-3">
-                  <input type="text" placeholder="First Name" required class="px-4 py-3 bg-surface border border-outline-variant rounded-lg text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
-                  <input type="text" placeholder="Last Name" required class="px-4 py-3 bg-surface border border-outline-variant rounded-lg text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
+                  <input type="text" placeholder="First Name" required class="w-full px-4 py-3 bg-surface border border-outline-variant rounded-lg text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
+                  <input type="text" placeholder="Last Name" required class="w-full px-4 py-3 bg-surface border border-outline-variant rounded-lg text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
                 </div>
                 <input type="email" placeholder="Email Address" required class="w-full px-4 py-3 bg-surface border border-outline-variant rounded-lg text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
                 <input type="tel" placeholder="Phone Number" class="w-full px-4 py-3 bg-surface border border-outline-variant rounded-lg text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
-                <textarea placeholder="Message (e.g., I'd like to schedule a viewing)" rows="3" required class="w-full px-4 py-3 bg-surface border border-outline-variant rounded-lg text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none"></textarea>
+                <textarea placeholder="I am interested in Penthouse Las Velas..." rows="3" class="w-full px-4 py-3 bg-surface border border-outline-variant rounded-lg text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none"></textarea>
                 <button type="submit" class="w-full py-3.5 bg-primary text-on-primary font-medium tracking-wide uppercase hover:bg-primary/90 transition-colors rounded-lg text-sm">
-                  Request Viewing
+                  Send Enquiry
                 </button>
-                <button type="button" class="w-full py-3.5 border border-outline-variant text-on-surface font-medium tracking-wide uppercase hover:bg-surface-container transition-colors rounded-lg text-sm flex items-center justify-center gap-2" onclick="window.print()">
+                <button type="button" class="w-full py-3.5 border border-outline-variant text-on-surface font-medium tracking-wide uppercase hover:bg-surface-container transition-colors rounded-lg text-sm flex items-center justify-center gap-2">
                   <span class="material-symbols-outlined text-[18px]">download</span>
                   Download Brochure
                 </button>
@@ -500,20 +494,20 @@
             
             <!-- Agent Card -->
             <div class="bg-surface-container-low p-6 rounded-xl border border-outline-variant/30">
-              <p class="text-xs text-on-surface/50 uppercase tracking-wide mb-4">Your Agent</p>
+              <p class="text-xs text-on-surface/50 uppercase tracking-wide mb-4">New Developments Team</p>
               <div class="flex items-center gap-4 mb-4">
                 <div class="w-14 h-14 bg-primary-container rounded-full flex items-center justify-center">
-                  <span class="font-display text-xl font-medium text-on-primary-container">AI</span>
+                  <span class="font-display text-xl font-medium text-on-primary-container">WHS</span>
                 </div>
                 <div>
-                  <p class="font-medium">Ana Isa O.</p>
-                  <p class="text-sm text-on-surface/50">Property Consultant</p>
+                  <p class="font-medium">New Developments</p>
+                  <p class="text-sm text-on-surface/50">Dedicated Team</p>
                 </div>
               </div>
               <div class="space-y-3">
-                <a href="tel:+34633754809" class="flex items-center gap-3 text-sm text-on-surface/70 hover:text-primary transition-colors">
+                <a href="tel:+34966146470" class="flex items-center gap-3 text-sm text-on-surface/70 hover:text-primary transition-colors">
                   <span class="material-symbols-outlined text-[18px]">call</span>
-                  +34 633 754 809
+                  +34 966 14 64 70
                 </a>
                 <a href="mailto:info@worldhousingspain.eu" class="flex items-center gap-3 text-sm text-on-surface/70 hover:text-primary transition-colors">
                   <span class="material-symbols-outlined text-[18px]">mail</span>
@@ -526,62 +520,49 @@
       </div>
     </section>
 
-    <!-- Related Properties -->
+    <!-- Related Developments -->
     <section class="py-20 lg:py-28 bg-surface-container-low">
       <div class="max-w-7xl mx-auto px-6 lg:px-12">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
             <p class="text-sm font-medium tracking-[0.2em] uppercase text-on-surface/60 mb-4">Similar</p>
             <h2 class="font-display text-3xl lg:text-4xl font-medium tracking-tight">
-              Related <span class="italic">Properties</span>
+              Related <span class="italic">Developments</span>
             </h2>
           </div>
-          <a href="03-property-listings.html" class="inline-flex items-center gap-3 text-sm font-medium tracking-wide uppercase hover:text-primary transition-colors group mt-6 md:mt-0">
+          <a href="projects.html" class="inline-flex items-center gap-3 text-sm font-medium tracking-wide uppercase hover:text-primary transition-colors group mt-6 md:mt-0">
             <span>View All</span>
             <span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </a>
         </div>
         
         <div class="grid md:grid-cols-3 gap-6">
-          <a href="development-chalet-moraira.html" class="group bg-surface-container rounded-xl overflow-hidden hover:shadow-elevation-2 transition-shadow block">
+          <a href="development-blue-gardens.html" class="group bg-surface-container rounded-xl overflow-hidden hover:shadow-elevation-2 transition-shadow block">
             <div class="relative aspect-[4/3] overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80" alt="Chalet Moraira - Mediterranean villa with private pool" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80" alt="Blue Gardens Benijófar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
               <div class="absolute top-3 left-3">
-                <span class="inline-block px-2.5 py-1 text-[10px] font-medium tracking-wide uppercase bg-primary text-on-primary rounded-full">Villa</span>
+                <span class="inline-block px-2.5 py-1 text-[10px] font-medium tracking-wide uppercase bg-primary text-on-primary rounded-full">Off-Plan</span>
               </div>
             </div>
             <div class="p-5">
-              <p class="text-xs text-on-surface/50 mb-1.5">Moraira</p>
-              <h3 class="font-display text-lg font-medium mb-2 group-hover:text-primary transition-colors">Chalet Moraira</h3>
-              <p class="text-xs text-on-surface/60 mb-3">3 Bed · 2 Bath · 148 m²</p>
-              <p class="font-display text-lg font-medium">€649,000</p>
+              <p class="text-xs text-on-surface/50 mb-1.5">Benijófar</p>
+              <h3 class="font-display text-lg font-medium mb-2 group-hover:text-primary transition-colors">Blue Gardens Benijófar</h3>
+              <p class="text-xs text-on-surface/60 mb-3">2–3 Bed · 2 Bath · 70–98 m²</p>
+              <p class="font-display text-lg font-medium">From €364,950</p>
             </div>
           </a>
-          
           <a href="development-chalet-pena.html" class="group bg-surface-container rounded-xl overflow-hidden hover:shadow-elevation-2 transition-shadow block">
             <div class="relative aspect-[4/3] overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Chalet Peña in Elche with modern amenities" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Chalet Peña" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute top-3 left-3">
+                <span class="inline-block px-2.5 py-1 text-[10px] font-medium tracking-wide uppercase bg-primary text-on-primary rounded-full">Off-Plan</span>
+              </div>
             </div>
             <div class="p-5">
               <p class="text-xs text-on-surface/50 mb-1.5">Elche</p>
               <h3 class="font-display text-lg font-medium mb-2 group-hover:text-primary transition-colors">Chalet Peña</h3>
               <p class="text-xs text-on-surface/60 mb-3">3 Bed · 2 Bath · 113 m²</p>
               <p class="font-display text-lg font-medium">€195,000</p>
-            </div>
-          </a>
-          
-          <a href="development-blue-gardens.html" class="group bg-surface-container rounded-xl overflow-hidden hover:shadow-elevation-2 transition-shadow block">
-            <div class="relative aspect-[4/3] overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80" alt="Blue Gardens Benijófar - modern apartment complex" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-              <div class="absolute top-3 left-3">
-                <span class="inline-block px-2.5 py-1 text-[10px] font-medium tracking-wide uppercase bg-secondary-container text-on-secondary-container rounded-full">Apartment</span>
-              </div>
-            </div>
-            <div class="p-5">
-              <p class="text-xs text-on-surface/50 mb-1.5">Benijófar</p>
-              <h3 class="font-display text-lg font-medium mb-2 group-hover:text-primary transition-colors">Blue Gardens Benijófar</h3>
-              <p class="text-xs text-on-surface/60 mb-3">3 Bed · 2 Bath · 82 m²</p>
-              <p class="font-display text-lg font-medium">€364,950</p>
             </div>
           </a>
         </div>
@@ -595,9 +576,7 @@
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
         <div>
           <img src="https://worldhousingspain.eu/wp-content/uploads/2024/09/whs-logo-retina-500.png" alt="World Housing Spain" class="h-10 w-auto brightness-0 mb-6">
-          <p class="text-on-surface/60 text-sm leading-relaxed">
-            Luxury real estate on the Costa Blanca. Curating exceptional properties since 2005.
-          </p>
+          <p class="text-on-surface/60 text-sm leading-relaxed">Luxury real estate on the Costa Blanca. Curating exceptional properties since 2005.</p>
         </div>
         <div>
           <h4 class="font-medium mb-4">Properties</h4>
@@ -613,7 +592,6 @@
           <ul class="space-y-3 text-sm text-on-surface/60">
             <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
             <li><a href="about.html#team" class="hover:text-primary transition-colors">Our Team</a></li>
-            
             <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
           </ul>
         </div>
@@ -630,12 +608,8 @@
       <div class="pt-8 border-t border-outline-variant/50 flex flex-col md:flex-row justify-between items-center gap-4">
         <p class="text-sm text-on-surface/50">&copy; 2026 World Housing Spain. All rights reserved.</p>
         <div class="flex items-center gap-6">
-          <a href="https://instagram.com/worldhousingspain" class="text-on-surface/50 hover:text-primary transition-colors" aria-label="Instagram">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-          </a>
-          <a href="https://linkedin.com/company/worldhousingspain" class="text-on-surface/50 hover:text-primary transition-colors" aria-label="LinkedIn">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          </a>
+          <a href="https://instagram.com/worldhousingspain" class="text-on-surface/50 hover:text-primary transition-colors" aria-label="Instagram"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="https://linkedin.com/company/worldhousingspain" class="text-on-surface/50 hover:text-primary transition-colors" aria-label="LinkedIn"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
         </div>
       </div>
     </div>
