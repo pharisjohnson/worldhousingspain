@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mallorcan Finca — World Housing Spain</title>
+  <meta name="description" content="Traditional Mallorcan-inspired finca in Altea Hills with 5 beds, 5 baths, 520 m² on an 8,000 m² plot. Pool house, tennis court, orchard, staff quarters. Listed at €2,900,000.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: 'var(--md-sys-color-primary)',
+            'on-primary': 'var(--md-sys-color-on-primary)',
+            'primary-container': 'var(--md-sys-color-primary-container)',
+            'on-primary-container': 'var(--md-sys-color-on-primary-container)',
+            secondary: 'var(--md-sys-color-secondary)',
+            'on-secondary': 'var(--md-sys-color-on-secondary)',
+            'secondary-container': 'var(--md-sys-color-secondary-container)',
+            'on-secondary-container': 'var(--md-sys-color-on-secondary-container)',
+            tertiary: 'var(--md-sys-color-tertiary)',
+            surface: 'var(--md-sys-color-surface)',
+            'surface-dim': 'var(--md-sys-color-surface-dim)',
+            'surface-bright': 'var(--md-sys-color-surface-bright)',
+            'surface-container-lowest': 'var(--md-sys-color-surface-container-lowest)',
+            'surface-container-low': 'var(--md-sys-color-surface-container-low)',
+            'surface-container': 'var(--md-sys-color-surface-container)',
+            'surface-container-high': 'var(--md-sys-color-surface-container-high)',
+            'surface-container-highest': 'var(--md-sys-color-surface-container-highest)',
+            'on-surface': 'var(--md-sys-color-on-surface)',
+            'on-surface-variant': 'var(--md-sys-color-on-surface-variant)',
+            outline: 'var(--md-sys-color-outline)',
+            'outline-variant': 'var(--md-sys-color-outline-variant)',
+          },
+          fontFamily: {
+            display: ['"EB Garamond"', 'serif'],
+            body: ['Manrope', 'sans-serif'],
+          },
+          borderRadius: {
+            'none': '0px',
+            'sm': '4px',
+            'DEFAULT': '8px',
+            'md': '12px',
+            'lg': '16px',
+            'xl': '28px',
+            'full': '9999px',
+          },
+          boxShadow: {
+            'elevation-1': '0 1px 2px 0 rgba(0,0,0,0.30), 0 1px 3px 1px rgba(0,0,0,0.15)',
+            'elevation-2': '0 1px 2px 0 rgba(0,0,0,0.30), 0 2px 6px 2px rgba(0,0,0,0.15)',
+            'elevation-3': '0 4px 8px 3px rgba(0,0,0,0.15), 0 1px 3px 0 rgba(0,0,0,0.30)',
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer base {
+      :root {
+        --md-sys-color-primary: #2c6e49;
+        --md-sys-color-on-primary: #ffffff;
+        --md-sys-color-primary-container: #b7f1c6;
+        --md-sys-color-on-primary-container: #002110;
+        --md-sys-color-secondary: #745b24;
+        --md-sys-color-on-secondary: #ffffff;
+        --md-sys-color-secondary-container: #ffe08c;
+        --md-sys-color-on-secondary-container: #261a00;
+        --md-sys-color-tertiary: #1a6666;
+        --md-sys-color-on-tertiary: #ffffff;
+        --md-sys-color-tertiary-container: #a4f0ef;
+        --md-sys-color-on-tertiary-container: #002020;
+        --md-sys-color-surface: #fdf8f0;
+        --md-sys-color-surface-dim: #dfd9cd;
+        --md-sys-color-surface-bright: #fdf8f0;
+        --md-sys-color-surface-container-lowest: #ffffff;
+        --md-sys-color-surface-container-low: #f9f3e7;
+        --md-sys-color-surface-container: #f3ede1;
+        --md-sys-color-surface-container-high: #ede7db;
+        --md-sys-color-surface-container-highest: #e7e2d6;
+        --md-sys-color-on-surface: #1d1b16;
+        --md-sys-color-on-surface-variant: #4b4539;
+        --md-sys-color-outline: #7d7564;
+        --md-sys-color-outline-variant: #cec5b4;
+      }
+    }
+  </style>
+  <style>
+    .hero-parallax {
+      background-attachment: fixed;
+    }
+    @media (max-width: 768px) {
+      .hero-parallax {
+        background-attachment: scroll;
+      }
+    }
+    .pull-quote {
+      font-size: 1.5rem;
+      line-height: 1.4;
+      font-style: italic;
+      color: var(--md-sys-color-primary);
+      border-left: 3px solid var(--md-sys-color-primary);
+      padding-left: 1.5rem;
+      margin: 2rem 0;
+    }
+    @media (min-width: 768px) {
+      .pull-quote {
+        font-size: 1.75rem;
+      }
+    }
+    .stat-divider {
+      border-color: var(--md-sys-color-outline-variant);
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto;
+      gap: 0.5rem;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s ease;
+    }
+    .gallery-grid .item:hover img {
+      transform: scale(1.05);
+    }
+    .gallery-grid .item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+    .gallery-grid .item:nth-child(2) { grid-column: span 1; grid-row: span 1; }
+    .gallery-grid .item:nth-child(3) { grid-column: span 1; grid-row: span 1; }
+    .gallery-grid .item:nth-child(4) { grid-column: span 2; grid-row: span 1; }
+    .gallery-grid .item:nth-child(5) { grid-column: span 1; grid-row: span 1; }
+    .gallery-grid .item:nth-child(6) { grid-column: span 1; grid-row: span 1; }
+    @media (max-width: 768px) {
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid .item:nth-child(1) { grid-column: span 2; grid-row: span 1; }
+      .gallery-grid .item:nth-child(4) { grid-column: span 2; grid-row: span 1; }
+    }
+  </style>
+</head>
+<body class="font-body bg-surface text-on-surface antialiased">
+
+  <!-- Skip to Content -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-on-primary focus:rounded-lg">
+    Skip to main content
+  </a>
+
+  <!-- Header -->
+  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-surface-container-low/90 backdrop-blur-md border-b border-outline-variant/50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex-shrink-0">
+          <img src="https://worldhousingspain.eu/wp-content/uploads/2024/09/whs-logo-retina-500.png" alt="World Housing Spain" class="h-12 w-auto brightness-0">
+        </a>
+        <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
+          <a href="index.html" class="text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors">Home</a>
+          <a href="about.html" class="text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors">About Us</a>
+          <div class="relative group py-2">
+            <button class="flex items-center gap-1 text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors focus:outline-none">
+              <span>Buy</span>
+              <span class="material-symbols-outlined text-[16px]">expand_more</span>
+            </button>
+            <div class="absolute left-0 mt-2 w-48 bg-surface-container-low border border-outline-variant/50 rounded-lg shadow-elevation-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-2">
+              <a href="projects.html" class="block px-4 py-2 text-sm text-on-surface/85 hover:bg-surface-container hover:text-primary transition-colors">New Builds</a>
+              <a href="03-property-listings.html" class="block px-4 py-2 text-sm text-on-surface/85 hover:bg-surface-container hover:text-primary transition-colors">Resale Properties</a>
+            </div>
+          </div>
+          <a href="sell.html" class="text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors">Sell</a>
+          <a href="02-luxury-collection.html" class="text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors">Luxury</a>
+          <a href="05-area-guide.html" class="text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors">Areas</a>
+          <div class="relative group py-2">
+            <button class="flex items-center gap-1 text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors focus:outline-none">
+              <span>Services</span>
+              <span class="material-symbols-outlined text-[16px]">expand_more</span>
+            </button>
+            <div class="absolute left-0 mt-2 w-56 bg-surface-container-low border border-outline-variant/50 rounded-lg shadow-elevation-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 py-2">
+              <a href="sell.html#valuation" class="block px-4 py-2 text-sm text-on-surface/85 hover:bg-surface-container hover:text-primary transition-colors">Property Valuation</a>
+              <a href="contact.html?service=legal" class="block px-4 py-2 text-sm text-on-surface/85 hover:bg-surface-container hover:text-primary transition-colors">Legal Advice</a>
+              <a href="contact.html?service=mortgages" class="block px-4 py-2 text-sm text-on-surface/85 hover:bg-surface-container hover:text-primary transition-colors">Mortgages</a>
+              <a href="contact.html?service=management" class="block px-4 py-2 text-sm text-on-surface/85 hover:bg-surface-container hover:text-primary transition-colors">Full-Service Management</a>
+            </div>
+          </div>
+          <a href="contact.html" class="text-sm font-medium tracking-wide uppercase text-on-surface hover:text-primary transition-colors">Contact</a>
+        </nav>
+        <button id="open-mobile-nav" class="md:hidden p-2 text-on-surface" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="material-symbols-outlined text-[28px]">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div id="mobile-nav" class="fixed inset-0 z-40 bg-surface/95 backdrop-blur-lg hidden" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <div class="flex flex-col items-center justify-center h-full gap-5 overflow-y-auto py-12">
+      <button id="close-mobile-nav" class="absolute top-6 right-6 p-2 text-on-surface" aria-label="Close menu">
+        <span class="material-symbols-outlined text-[28px]">close</span>
+      </button>
+      <a href="index.html" class="text-xl font-display font-medium text-on-surface hover:text-primary transition-colors">Home</a>
+      <a href="about.html" class="text-xl font-display font-medium text-on-surface hover:text-primary transition-colors">About Us</a>
+      <div class="text-center my-1">
+        <span class="text-xs uppercase tracking-widest text-on-surface/40 block mb-1">Buy</span>
+        <div class="flex flex-col gap-1.5">
+          <a href="projects.html" class="text-lg font-display font-medium text-on-surface hover:text-primary transition-colors">New Builds</a>
+          <a href="03-property-listings.html" class="text-lg font-display font-medium text-on-surface hover:text-primary transition-colors">Resale Properties</a>
+        </div>
+      </div>
+      <a href="sell.html" class="text-xl font-display font-medium text-on-surface hover:text-primary transition-colors">Sell</a>
+      <a href="02-luxury-collection.html" class="text-xl font-display font-medium text-on-surface hover:text-primary transition-colors">Luxury</a>
+      <a href="05-area-guide.html" class="text-xl font-display font-medium text-on-surface hover:text-primary transition-colors">Areas</a>
+      <div class="text-center my-1">
+        <span class="text-xs uppercase tracking-widest text-on-surface/40 block mb-1">Services</span>
+        <div class="flex flex-col gap-1.5">
+          <a href="sell.html#valuation" class="text-lg font-display font-medium text-on-surface/85 hover:text-primary transition-colors">Property Valuation</a>
+          <a href="contact.html?service=legal" class="text-lg font-display font-medium text-on-surface/85 hover:text-primary transition-colors">Legal Advice</a>
+          <a href="contact.html?service=mortgages" class="text-lg font-display font-medium text-on-surface/85 hover:text-primary transition-colors">Mortgages</a>
+          <a href="contact.html?service=management" class="text-lg font-display font-medium text-on-surface/85 hover:text-primary transition-colors">Full-Service Management</a>
+        </div>
+      </div>
+      <a href="contact.html" class="text-xl font-display font-medium text-on-surface hover:text-primary transition-colors">Contact</a>
+    </div>
+  </div>
+
+  <script>
+    const mobileNav = document.getElementById('mobile-nav');
+    const openBtn = document.getElementById('open-mobile-nav');
+    const closeBtn = document.getElementById('close-mobile-nav');
+    function openMenu() { mobileNav.classList.remove('hidden'); openBtn.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; }
+    function closeMenu() { mobileNav.classList.add('hidden'); openBtn.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; }
+    openBtn?.addEventListener('click', openMenu);
+    closeBtn?.addEventListener('click', closeMenu);
+    mobileNav?.addEventListener('click', (e) => { if (e.target === mobileNav) closeMenu(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !mobileNav.classList.contains('hidden')) closeMenu(); });
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) header.classList.add('shadow-elevation-1');
+      else header.classList.remove('shadow-elevation-1');
+    });
+  </script>
+  <main id="main-content">
+    <!-- Breadcrumb -->
+    <nav class="relative z-20 max-w-7xl mx-auto px-6 lg:px-12 pt-24">
+      <ol class="flex items-center gap-2 text-sm text-on-surface/50">
+        <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
+        <li><span class="material-symbols-outlined text-[16px]">chevron_right</span></li>
+        <li><a href="02-luxury-collection.html" class="hover:text-primary transition-colors">Luxury Collection</a></li>
+        <li><span class="material-symbols-outlined text-[16px]">chevron_right</span></li>
+        <li class="text-on-surface font-medium">Mallorcan Finca</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative min-h-screen flex items-end pb-20">
+      <div class="absolute inset-0 hero-parallax">
+        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1920&q=80" alt="Mallorcan Finca" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-surface/10"></div>
+      </div>
+      <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full">
+        <div class="max-w-3xl">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-sm font-medium tracking-[0.2em] uppercase text-on-surface/60">The Azure Sanctuary</span>
+            <span class="inline-flex items-center px-3 py-1 text-xs font-medium tracking-wide uppercase bg-tertiary/10 text-tertiary rounded-full">
+              €2,900,000
+            </span>
+          </div>
+          <h1 class="font-display text-5xl sm:text-6xl md:text-8xl font-medium tracking-tight mb-4 leading-[1.1]">
+            Mallorcan Finca
+          </h1>
+          <p class="text-base md:text-lg text-on-surface/70 max-w-xl leading-relaxed mb-8">
+            Mallorcan-inspired finca in Altea Hills, blending traditional Spanish architecture with contemporary luxury.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="#inquiry" class="inline-flex items-center gap-3 px-8 py-4 bg-primary text-on-primary text-sm font-medium tracking-wide uppercase rounded-lg hover:bg-[#235a3a] transition-colors shadow-elevation-1">
+              <span>Arrange Private Viewing</span>
+              <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+            </a>
+            <a href="#gallery" class="inline-flex items-center gap-3 px-8 py-4 border border-outline-variant text-on-surface text-sm font-medium tracking-wide uppercase rounded-lg hover:bg-surface-container transition-colors">
+              <span class="material-symbols-outlined text-[20px]">photo_library</span>
+              <span>View Gallery</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- At a Glance -->
+    <section class="py-16 lg:py-20 bg-surface border-t border-outline-variant/30">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <p class="text-xs font-medium tracking-[0.2em] uppercase text-on-surface/40 mb-8 text-center">At a Glance</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+            <div class="text-center">
+              <span class="material-symbols-outlined text-primary text-[24px] mb-1 block">bed</span>
+              <p class="font-display text-xl font-medium">5</p>
+              <p class="text-xs text-on-surface/50 uppercase tracking-wide">Bedrooms</p>
+            </div>
+            <div class="text-center">
+              <span class="material-symbols-outlined text-primary text-[24px] mb-1 block">bathtub</span>
+              <p class="font-display text-xl font-medium">5</p>
+              <p class="text-xs text-on-surface/50 uppercase tracking-wide">Bathrooms</p>
+            </div>
+            <div class="text-center">
+              <span class="material-symbols-outlined text-primary text-[24px] mb-1 block">square_foot</span>
+              <p class="font-display text-xl font-medium">520 m²</p>
+              <p class="text-xs text-on-surface/50 uppercase tracking-wide">Living Area</p>
+            </div>
+            <div class="text-center">
+              <span class="material-symbols-outlined text-primary text-[24px] mb-1 block">landscape</span>
+              <p class="font-display text-xl font-medium">8,000 m²</p>
+              <p class="text-xs text-on-surface/50 uppercase tracking-wide">Plot / Setting</p>
+            </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="py-20 lg:py-28 bg-surface">
+      <div class="max-w-4xl mx-auto px-6 lg:px-12">
+        <p class="text-sm font-medium tracking-[0.2em] uppercase text-on-surface/40 mb-4">Introduction</p>
+        <h2 class="font-display text-3xl lg:text-5xl font-medium tracking-tight mb-8 leading-tight">
+          A <span class="italic">Mediterranean</span> Masterpiece
+        </h2>
+        <div class="text-on-surface/70 text-lg leading-relaxed space-y-6 max-w-3xl">
+          <p>Inspired by the finest fincas of Mallorca, this estate captures the essence of Mediterranean rural luxury while commanding one of the most privileged positions in Altea Hills. Exposed wooden beams, natural stone walls, and terracotta floors create an atmosphere of timeless elegance.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="py-16 lg:py-24 bg-surface-container-low">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <p class="text-xs font-medium tracking-[0.2em] uppercase text-on-surface/40 mb-4">Gallery</p>
+        <h2 class="font-display text-3xl lg:text-4xl font-medium tracking-tight mb-10">
+          Visual <span class="italic">Journey</span>
+        </h2>
+        <div class="gallery-grid">
+          <div class="item relative rounded-xl overflow-hidden bg-surface-container-highest group cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1000&q=80" alt="Mallorcan Finca — property photo 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          </div>
+          <div class="item relative rounded-xl overflow-hidden bg-surface-container-highest group cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=1000&q=80" alt="Mallorcan Finca — property photo 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          </div>
+          <div class="item relative rounded-xl overflow-hidden bg-surface-container-highest group cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1000&q=80" alt="Mallorcan Finca — property photo 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          </div>
+          <div class="item relative rounded-xl overflow-hidden bg-surface-container-highest group cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1000&q=80" alt="Mallorcan Finca — property photo 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          </div>
+          <div class="item relative rounded-xl overflow-hidden bg-surface-container-highest group cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=1000&q=80" alt="Mallorcan Finca — property photo 5" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          </div>
+          <div class="item relative rounded-xl overflow-hidden bg-surface-container-highest group cursor-pointer">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1000&q=80" alt="Mallorcan Finca — property photo 6" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Architect's Vision -->
+    <section class="py-20 lg:py-28 bg-surface">
+      <div class="max-w-4xl mx-auto px-6 lg:px-12">
+        <p class="text-sm font-medium tracking-[0.2em] uppercase text-on-surface/40 mb-4">Architect's Vision</p>
+        <h2 class="font-display text-3xl lg:text-5xl font-medium tracking-tight mb-8 leading-tight">
+          The <span class="italic">Design</span> Philosophy
+        </h2>
+        <div class="text-on-surface/70 text-lg leading-relaxed space-y-6">
+          <p>The design draws from the vernacular architecture of the Balearic Islands — thick stone walls for natural insulation, deep eaves for shade, and courtyard gardens that bring the outdoors in. Yet the execution is thoroughly modern: underfloor heating, ducted air conditioning, and a fully integrated smart home system ensure comfort without compromising character.</p>
+        </div>
+        <div class="pull-quote">
+          A finca is not built; it grows from the land. Our task was to let the stones, the wood, and the light tell their own story — and to add only what was necessary for a life of grace and comfort.
+        </div>
+        <p class="text-sm text-on-surface/50 italic">— Conservation Architect, Heritage Design Studio</p>
+      </div>
+    </section>
+
+    <!-- Interiors -->
+    <section class="relative py-24 lg:py-32 bg-surface-container-low overflow-hidden">
+      <div class="absolute right-0 top-0 w-1/3 h-full hidden lg:block opacity-10">
+        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1000&q=80" alt="" class="w-full h-full object-cover">
+      </div>
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+        <div class="max-w-3xl">
+          <p class="text-sm font-medium tracking-[0.2em] uppercase text-on-surface/40 mb-4">Interiors</p>
+          <h2 class="font-display text-3xl lg:text-5xl font-medium tracking-tight mb-8 leading-tight">
+            Spaces of <span class="italic">Refinement</span>
+          </h2>
+          <div class="text-on-surface/70 text-lg leading-relaxed">
+            <p>The 520-square-metre interior is arranged around a central courtyard with a centuries-old olive tree. The living room features a monumental stone fireplace, restored wooden beams, and French doors that open onto the courtyard and pool terrace. The kitchen blends traditional Mallorcan tiles with modern functionality, featuring a Lacanche range, marble countertops, and a pantry worthy of a professional chef. The primary suite occupies the upper floor, with a private terrace overlooking the coastline, a bathroom with a freestanding stone bathtub, and a dressing room. Four additional bedrooms are distributed across the ground and upper floors, each with en-suite bathrooms and terrace access. A library, study, and formal dining room complete the interior.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Outdoor Living -->
+    <section class="py-20 lg:py-28 bg-surface">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div class="aspect-[4/3] rounded-xl overflow-hidden bg-surface-container-highest">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1000&q=80" alt="Outdoor living at Mallorcan Finca" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <p class="text-sm font-medium tracking-[0.2em] uppercase text-on-surface/40 mb-4">Outdoor Sanctuary</p>
+            <h2 class="font-display text-3xl lg:text-4xl font-medium tracking-tight mb-8 leading-tight">
+              Living <span class="italic">Alfresco</span>
+            </h2>
+            <div class="text-on-surface/70 text-lg leading-relaxed space-y-4">
+              <p>The estate sits on two acres of landscaped Mediterranean gardens, with a tennis court, a private orchard of citrus and almond trees, and a pool house that functions as an entertainment pavilion. The main pool is heated and features a sunken lounge area. The orchard produces seasonal fruit, while the vegetable garden supplies the kitchen. A staff apartment above the garage ensures privacy for both residents and staff.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features & Floor Plan -->
+    <section class="py-20 lg:py-28 bg-surface-container-low">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+          <div>
+            <p class="text-sm font-medium tracking-[0.2em] uppercase text-on-surface/40 mb-4">Features</p>
+            <h2 class="font-display text-3xl lg:text-4xl font-medium tracking-tight mb-8 leading-tight">
+              Every <span class="italic">Detail</span> Considered
+            </h2>
+            <ul class="space-y-3">
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>
+                <span class="text-sm text-on-surface/70">Pool House with Kitchen</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>
+                <span class="text-sm text-on-surface/70">Tennis Court</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>
+                <span class="text-sm text-on-surface/70">Private Orchard</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>
+                <span class="text-sm text-on-surface/70">Staff Quarters</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>
+                <span class="text-sm text-on-surface/70">Heated Pool with Sunken Lounge</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>
+                <span class="text-sm text-on-surface/70">Mediterranean Gardens</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>
+                <span class="text-sm text-on-surface/70">Vegetable Garden</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>
+                <span class="text-sm text-on-surface/70">Library & Study</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>
+                <span class="text-sm text-on-surface/70">Formal Dining Room</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>
+                <span class="text-sm text-on-surface/70">Wine Cellar</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>
+                <span class="text-sm text-on-surface/70">Garage for 4 Vehicles</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0"></span>
+                <span class="text-sm text-on-surface/70">Citrus & Almond Groves</span>
+              </li>
+
+            </ul>
+          </div>
+          <div>
+            <p class="text-sm font-medium tracking-[0.2em] uppercase text-on-surface/40 mb-4">Location</p>
+            <h2 class="font-display text-3xl lg:text-4xl font-medium tracking-tight mb-8 leading-tight">
+              <span class="italic">Prime</span> Position
+            </h2>
+            <div class="bg-surface-container rounded-xl p-6">
+              <div class="mb-6">
+                <p class="text-sm text-on-surface/60 flex items-center gap-2">
+                  <span class="material-symbols-outlined text-[18px]">location_on</span>
+                  Altea Hills · Marina Baixa · Alicante
+                </p>
+              </div>
+              <div>
+              <div class="flex items-center justify-between py-3 border-b border-outline-variant/30 last:border-0">
+                <span class="text-sm text-on-surface/70">Altea Hills Country Club</span>
+                <span class="text-sm font-medium text-primary">5 min</span>
+              </div>
+              <div class="flex items-center justify-between py-3 border-b border-outline-variant/30 last:border-0">
+                <span class="text-sm text-on-surface/70">Altea Old Town & Beach</span>
+                <span class="text-sm font-medium text-primary">10 min</span>
+              </div>
+              <div class="flex items-center justify-between py-3 border-b border-outline-variant/30 last:border-0">
+                <span class="text-sm text-on-surface/70">Cap Negret Beach</span>
+                <span class="text-sm font-medium text-primary">15 min</span>
+              </div>
+              <div class="flex items-center justify-between py-3 border-b border-outline-variant/30 last:border-0">
+                <span class="text-sm text-on-surface/70">Benidorm & Terra Mítica</span>
+                <span class="text-sm font-medium text-primary">20 min</span>
+              </div>
+              <div class="flex items-center justify-between py-3 border-b border-outline-variant/30 last:border-0">
+                <span class="text-sm text-on-surface/70">Alicante Airport</span>
+                <span class="text-sm font-medium text-primary">65 km</span>
+              </div>
+
+              </div>
+              <div class="mt-6 flex items-center gap-3 text-sm text-on-surface/60">
+                <span class="material-symbols-outlined text-[18px]">map</span>
+                <span>Detailed location provided upon enquiry</span>
+              </div>
+            </div>
+            <!-- Inquiry / Broker Card -->
+            <div id="inquiry" class="mt-8 bg-surface-container rounded-xl p-6 border border-outline-variant/30">
+              <h3 class="font-display text-xl font-medium mb-4">Arrange a Private Viewing</h3>
+              <p class="text-sm text-on-surface/60 mb-6">This exclusive property is available for private viewing by appointment. Our luxury concierge team will attend to every detail.</p>
+              <form class="space-y-4">
+                <div class="grid grid-cols-2 gap-3">
+                  <input type="text" placeholder="First Name" required class="w-full px-4 py-3 bg-surface border border-outline-variant rounded-lg text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
+                  <input type="text" placeholder="Last Name" required class="w-full px-4 py-3 bg-surface border border-outline-variant rounded-lg text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
+                </div>
+                <input type="email" placeholder="Email Address" required class="w-full px-4 py-3 bg-surface border border-outline-variant rounded-lg text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
+                <input type="tel" placeholder="Phone Number" class="w-full px-4 py-3 bg-surface border border-outline-variant rounded-lg text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
+                <textarea placeholder="I am interested in Mallorcan Finca..." rows="3" class="w-full px-4 py-3 bg-surface border border-outline-variant rounded-lg text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none"></textarea>
+                <button type="submit" class="w-full py-3.5 bg-primary text-on-primary font-medium tracking-wide uppercase hover:bg-primary/90 transition-colors rounded-lg text-sm">
+                  Request Private Viewing
+                </button>
+              </form>
+              <div class="mt-6 pt-6 border-t border-outline-variant/30">
+                <div class="flex items-center gap-4 mb-4">
+                  <div class="w-14 h-14 bg-primary-container rounded-full flex items-center justify-center">
+                    <span class="font-display text-xl font-medium text-on-primary-container">WHS</span>
+                  </div>
+                  <div>
+                    <p class="font-medium">Luxury Concierge</p>
+                    <p class="text-sm text-on-surface/50">Private Client Services</p>
+                  </div>
+                </div>
+                <div class="space-y-3">
+                  <a href="tel:+34966146470" class="flex items-center gap-3 text-sm text-on-surface/70 hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined text-[18px]">call</span>
+                    +34 966 14 64 70
+                  </a>
+                  <a href="mailto:luxury@worldhousingspain.eu" class="flex items-center gap-3 text-sm text-on-surface/70 hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined text-[18px]">mail</span>
+                    luxury@worldhousingspain.eu
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Luxury Properties -->
+    <section class="py-20 lg:py-28 bg-surface">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div>
+            <p class="text-sm font-medium tracking-[0.2em] uppercase text-on-surface/40 mb-4">Also in the Collection</p>
+            <h2 class="font-display text-3xl lg:text-4xl font-medium tracking-tight">
+              More from the <span class="italic">Azure Sanctuary</span>
+            </h2>
+          </div>
+          <a href="02-luxury-collection.html" class="inline-flex items-center gap-3 text-sm font-medium tracking-wide uppercase hover:text-primary transition-colors group mt-6 md:mt-0">
+            <span>View All</span>
+            <span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </a>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <a href="luxury-andalusian-cortijo.html" class="group bg-surface-container rounded-xl overflow-hidden hover:shadow-elevation-2 transition-shadow block">
+            <div class="relative aspect-[4/3] overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=600&q=80" alt="Andalusian Cortijo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute top-3 left-3">
+                <span class="inline-block px-2.5 py-1 text-[10px] font-medium tracking-wide uppercase primary/10 text-primary rounded-full">Azure Sanctuary</span>
+              </div>
+            </div>
+            <div class="p-5">
+              <p class="text-xs text-on-surface/50 mb-1.5">Moraira · €4,800,000</p>
+              <h3 class="font-display text-lg font-medium mb-2 group-hover:text-primary transition-colors">Andalusian Cortijo</h3>
+              <p class="text-xs text-on-surface/60 mb-3">Moraira · €4,800,000</p>
+              <p class="font-display text-sm text-primary font-medium">View Property</p>
+            </div>
+          </a>
+          <a href="luxury-ibizan-villa.html" class="group bg-surface-container rounded-xl overflow-hidden hover:shadow-elevation-2 transition-shadow block">
+            <div class="relative aspect-[4/3] overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Ibizan White Villa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+              <div class="absolute top-3 left-3">
+                <span class="inline-block px-2.5 py-1 text-[10px] font-medium tracking-wide uppercase primary/10 text-primary rounded-full">Azure Sanctuary</span>
+              </div>
+            </div>
+            <div class="p-5">
+              <p class="text-xs text-on-surface/50 mb-1.5">Benissa Coast · €5,500,000</p>
+              <h3 class="font-display text-lg font-medium mb-2 group-hover:text-primary transition-colors">Ibizan White Villa</h3>
+              <p class="text-xs text-on-surface/60 mb-3">Benissa Coast · €5,500,000</p>
+              <p class="font-display text-sm text-primary font-medium">View Property</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-16 bg-surface-container-low border-t border-outline-variant/50">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div>
+          <img src="https://worldhousingspain.eu/wp-content/uploads/2024/09/whs-logo-retina-500.png" alt="World Housing Spain" class="h-10 w-auto brightness-0 mb-6">
+          <p class="text-on-surface/60 text-sm leading-relaxed">Luxury real estate on the Costa Blanca. Curating exceptional properties since 2005.</p>
+        </div>
+        <div>
+          <h4 class="font-medium mb-4">Properties</h4>
+          <ul class="space-y-3 text-sm text-on-surface/60">
+            <li><a href="03-property-listings.html" class="hover:text-primary transition-colors">Buy</a></li>
+            <li><a href="sell.html" class="hover:text-primary transition-colors">Sell</a></li>
+            <li><a href="rent.html" class="hover:text-primary transition-colors">Rent</a></li>
+            <li><a href="projects.html" class="hover:text-primary transition-colors">New Developments</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-medium mb-4">Company</h4>
+          <ul class="space-y-3 text-sm text-on-surface/60">
+            <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
+            <li><a href="about.html#team" class="hover:text-primary transition-colors">Our Team</a></li>
+            <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-medium mb-4">Legal</h4>
+          <ul class="space-y-3 text-sm text-on-surface/60">
+            <li><a href="privacy.html" class="hover:text-primary transition-colors">Privacy Policy</a></li>
+            <li><a href="cookies.html" class="hover:text-primary transition-colors">Cookie Policy</a></li>
+            <li><a href="terms.html" class="hover:text-primary transition-colors">Terms of Service</a></li>
+            <li><a href="legal.html" class="hover:text-primary transition-colors">Legal Notice</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-outline-variant/50 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-sm text-on-surface/50">&copy; 2026 World Housing Spain. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="https://instagram.com/worldhousingspain" class="text-on-surface/50 hover:text-primary transition-colors" aria-label="Instagram"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="https://linkedin.com/company/worldhousingspain" class="text-on-surface/50 hover:text-primary transition-colors" aria-label="LinkedIn"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/34633754809" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-elevation-3 hover:scale-110 transition-transform duration-300" aria-label="Contact us on WhatsApp">
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.739-1.458L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.013-5.101-2.859-6.953C16.578 1.999 14.118.99 11.998.99c-5.441 0-9.866 4.372-9.87 9.802 0 1.714.473 3.391 1.369 4.869L2.512 21.99l6.135-1.836zM18.254 14.91c-.344-.173-2.035-1.004-2.348-1.118-.314-.115-.543-.173-.77.173-.228.347-.88 1.118-1.079 1.35-.198.232-.397.26-.74.088-.344-.173-1.45-.535-2.762-1.706-1.02-1.018-1.708-2.276-1.908-2.623-.198-.347-.021-.534.152-.706.156-.155.344-.36.516-.54.172-.18.229-.304.344-.508.115-.203.057-.383-.028-.556-.086-.173-.771-1.854-1.056-2.057-.278-.2-.56-.172-.77-.162-.198.009-.427.013-.656.013-.23 0-.602.087-.917.43-.314.343-1.199 1.15-1.199 2.802 0 1.652 1.2 3.25 1.369 3.48.17.23 2.362 3.633 5.722 5.093.801.348 1.424.555 1.912.712.805.257 1.537.221 2.115.141.644-.089 2.035-.83 2.319-1.63.284-.8 2.84-3.525.17-1.15z"/>
+    </svg>
+  </a>
+
+</body>
+</html>
