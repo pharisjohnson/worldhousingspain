@@ -45,7 +45,7 @@
   <style type="text/tailwindcss">
     @layer base {
       :root {
-        --md-sys-color-primary: #2c6e49;
+        --md-sys-color-primary: #2C6E49;
         --md-sys-color-on-primary: #ffffff;
         --md-sys-color-primary-container: #b7f1c6;
         --md-sys-color-on-primary-container: #002110;
@@ -129,55 +129,130 @@
       </div>
     </div>
   </header>
-    <!-- Mobile Nav Overlay -->
-  <div id="mobile-nav" class="fixed inset-0 z-40 bg-surface/95 backdrop-blur-lg hidden" role="dialog" aria-modal="true" aria-label="Mobile navigation">
-    <div class="flex flex-col items-center justify-center h-full gap-5 overflow-y-auto py-12">
-      <button id="close-mobile-nav" class="absolute top-6 right-6 p-2 text-on-surface" aria-label="Close menu">
+  <!-- Mobile Nav Overlay -->
+  <div id="mobile-nav" class="fixed inset-0 z-40 bg-surface/98 backdrop-blur-xl hidden flex-col" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <div class="flex items-center justify-between px-6 h-20 border-b border-outline-variant/30">
+      <a href="index.html" class="flex-shrink-0">
+        <img src="https://worldhousingspain.eu/wp-content/uploads/2024/09/whs-logo-retina-500.png" alt="World Housing Spain" class="h-10 w-auto brightness-0">
+      </a>
+      <button id="close-mobile-nav" class="p-2 text-on-surface hover:text-primary transition-colors" aria-label="Close menu">
         <span class="material-symbols-outlined text-[28px]">close</span>
       </button>
-      <a href="index.html" class="text-xl font-display font-medium text-on-surface hover:text-primary transition-colors">Home</a>
-      <a href="about.html" class="text-xl font-display font-medium text-on-surface hover:text-primary transition-colors">About Us</a>
-      
-      <!-- Buy Submenu -->
-      <div class="text-center my-1">
-        <span class="text-xs uppercase tracking-widest text-on-surface/40 block mb-1">Buy</span>
-        <div class="flex flex-col gap-1.5">
-          <a href="projects.html" class="text-lg font-display font-medium text-on-surface hover:text-primary transition-colors">New Builds</a>
-          <a href="03-property-listings.html" class="text-lg font-display font-medium text-on-surface hover:text-primary transition-colors">Resale Properties</a>
-        </div>
+    </div>
+    
+    <nav class="flex-1 overflow-y-auto px-6 py-8" aria-label="Mobile navigation">
+      <ul class="space-y-2">
+        <li>
+          <a href="index.html" class="flex items-center py-3 text-lg font-display font-medium text-on-surface hover:text-primary transition-colors">
+            <span class="material-symbols-outlined text-[20px] mr-4 text-on-surface/50">home</span>
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="about.html" class="flex items-center py-3 text-lg font-display font-medium text-on-surface hover:text-primary transition-colors">
+            <span class="material-symbols-outlined text-[20px] mr-4 text-on-surface/50">info</span>
+            About Us
+          </a>
+        </li>
+        
+        <!-- Buy Dropdown -->
+        <li class="border-b border-outline-variant/20">
+          <button class="mobile-dropdown-btn w-full flex items-center justify-between py-3 text-lg font-display font-medium text-on-surface hover:text-primary transition-colors" aria-expanded="false">
+            <span class="flex items-center">
+              <span class="material-symbols-outlined text-[20px] mr-4 text-on-surface/50">shopping_cart</span>
+              Buy
+            </span>
+            <span class="material-symbols-outlined text-[20px] transition-transform duration-300">expand_more</span>
+          </button>
+          <div class="mobile-dropdown-content hidden overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0;">
+            <ul class="pl-12 pb-4 space-y-1">
+              <li>
+                <a href="projects.html" class="block py-2 text-base font-display text-on-surface/80 hover:text-primary transition-colors">New Builds</a>
+              </li>
+              <li>
+                <a href="03-property-listings.html" class="block py-2 text-base font-display text-on-surface/80 hover:text-primary transition-colors">Resale Properties</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        
+        <li>
+          <a href="sell.html" class="flex items-center py-3 text-lg font-display font-medium text-on-surface hover:text-primary transition-colors">
+            <span class="material-symbols-outlined text-[20px] mr-4 text-on-surface/50">sell</span>
+            Sell
+          </a>
+        </li>
+        <li>
+          <a href="02-luxury-collection.html" class="flex items-center py-3 text-lg font-display font-medium text-on-surface hover:text-primary transition-colors">
+            <span class="material-symbols-outlined text-[20px] mr-4 text-on-surface/50">diamond</span>
+            Luxury
+          </a>
+        </li>
+        <li>
+          <a href="05-area-guide.html" class="flex items-center py-3 text-lg font-display font-medium text-on-surface hover:text-primary transition-colors">
+            <span class="material-symbols-outlined text-[20px] mr-4 text-on-surface/50">location_on</span>
+            Areas
+          </a>
+        </li>
+
+        <!-- Services Dropdown -->
+        <li class="border-b border-outline-variant/20">
+          <button class="mobile-dropdown-btn w-full flex items-center justify-between py-3 text-lg font-display font-medium text-on-surface hover:text-primary transition-colors" aria-expanded="false">
+            <span class="flex items-center">
+              <span class="material-symbols-outlined text-[20px] mr-4 text-on-surface/50">handyman</span>
+              Services
+            </span>
+            <span class="material-symbols-outlined text-[20px] transition-transform duration-300">expand_more</span>
+          </button>
+          <div class="mobile-dropdown-content hidden overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0;">
+            <ul class="pl-12 pb-4 space-y-1">
+              <li>
+                <a href="sell.html#valuation" class="block py-2 text-base font-display text-on-surface/80 hover:text-primary transition-colors">Property Valuation</a>
+              </li>
+              <li>
+                <a href="contact.html?service=legal" class="block py-2 text-base font-display text-on-surface/80 hover:text-primary transition-colors">Legal Advice</a>
+              </li>
+              <li>
+                <a href="contact.html?service=mortgages" class="block py-2 text-base font-display text-on-surface/80 hover:text-primary transition-colors">Mortgages</a>
+              </li>
+              <li>
+                <a href="contact.html?service=management" class="block py-2 text-base font-display text-on-surface/80 hover:text-primary transition-colors">Full-Service Management</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <a href="contact.html" class="flex items-center py-3 text-lg font-display font-medium text-on-surface hover:text-primary transition-colors">
+            <span class="material-symbols-outlined text-[20px] mr-4 text-on-surface/50">mail</span>
+            Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+    
+    <!-- Mobile Nav Footer -->
+    <div class="px-6 py-6 border-t border-outline-variant/30">
+      <div class="flex items-center justify-center gap-6 mb-4">
+        <a href="https://www.instagram.com/worldhousingspain" target="_blank" rel="noopener noreferrer" class="p-2 text-on-surface/60 hover:text-primary transition-colors" aria-label="Instagram">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@worldhousing.spain" target="_blank" rel="noopener noreferrer" class="p-2 text-on-surface/60 hover:text-primary transition-colors" aria-label="TikTok">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/WorldHousingSpain" target="_blank" rel="noopener noreferrer" class="p-2 text-on-surface/60 hover:text-primary transition-colors" aria-label="Facebook">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/world-housing-spain-3a1176385" target="_blank" rel="noopener noreferrer" class="p-2 text-on-surface/60 hover:text-primary transition-colors" aria-label="LinkedIn">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
       </div>
-
-      <a href="sell.html" class="text-xl font-display font-medium text-on-surface hover:text-primary transition-colors">Sell</a>
-      <a href="02-luxury-collection.html" class="text-xl font-display font-medium text-on-surface hover:text-primary transition-colors">Luxury</a>
-      <a href="05-area-guide.html" class="text-xl font-display font-medium text-on-surface hover:text-primary transition-colors">Areas</a>
-
-      <!-- Services Submenu -->
-      <div class="text-center my-1">
-        <span class="text-xs uppercase tracking-widest text-on-surface/40 block mb-1">Services</span>
-        <div class="flex flex-col gap-1.5">
-          <a href="sell.html#valuation" class="text-lg font-display font-medium text-on-surface/85 hover:text-primary transition-colors">Property Valuation</a>
-          <a href="contact.html?service=legal" class="text-lg font-display font-medium text-on-surface/85 hover:text-primary transition-colors">Legal Advice</a>
-          <a href="contact.html?service=mortgages" class="text-lg font-display font-medium text-on-surface/85 hover:text-primary transition-colors">Mortgages</a>
-          <a href="contact.html?service=management" class="text-lg font-display font-medium text-on-surface/85 hover:text-primary transition-colors">Full-Service Management</a>
-        </div>
-      </div>
-
-      <a href="contact.html" class="text-xl font-display font-medium text-on-surface hover:text-primary transition-colors">Contact</a>
+      <a href="https://wa.me/34662512994" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-3 bg-[#25D366] text-white rounded-lg font-medium hover:bg-[#128C7E] transition-colors">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.739-1.458L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.013-5.101-2.859-6.953C16.578 1.999 14.118.99 11.998.99c-5.441 0-9.866 4.372-9.87 9.802 0 1.714.473 3.391 1.369 4.869L2.512 21.99l6.135-1.836zM18.254 14.91c-.344-.173-2.035-1.004-2.348-1.118-.314-.115-.543-.173-.77.173-.228.347-.88 1.118-1.079 1.35-.198.232-.397.26-.74.088-.344-.173-1.45-.535-2.762-1.706-1.02-1.018-1.708-2.276-1.908-2.623-.198-.347-.021-.534.152-.706.156-.155.344-.36.516-.54.172-.18.229-.304.344-.508.115-.203.057-.383-.028-.556-.086-.173-.771-1.854-1.056-2.057-.278-.2-.56-.172-.77-.162-.198.009-.427.013-.656.013-.23 0-.602.087-.917.43-.314.343-1.199 1.15-1.199 2.802 0 1.652 1.2 3.25 1.369 3.48.17.23 2.362 3.633 5.722 5.093.801.348 1.424.555 1.912.712.805.257 1.537.221 2.115.141.644-.089 2.035-.83 2.319-1.63.284-.8 2.84-3.525.17-1.15z"/></svg>
+        WhatsApp Us
+      </a>
     </div>
   </div>
-  <script>
-    const mobileNav = document.getElementById('mobile-nav');
-    const openBtn = document.getElementById('open-mobile-nav');
-    const closeBtn = document.getElementById('close-mobile-nav');
-    function openMenu() { mobileNav.classList.remove('hidden'); openBtn.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; }
-    function closeMenu() { mobileNav.classList.add('hidden'); openBtn.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; }
-    openBtn?.addEventListener('click', openMenu);
-    closeBtn?.addEventListener('click', closeMenu);
-    mobileNav?.addEventListener('click', (e) => { if (e.target === mobileNav) closeMenu(); });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !mobileNav.classList.contains('hidden')) closeMenu(); });
-    const header = document.getElementById('site-header');
-    window.addEventListener('scroll', () => { if (window.scrollY > 50) { header.classList.add('shadow-elevation-1'); } else { header.classList.remove('shadow-elevation-1'); } });
-  </script>
 
   <main id="main-content" class="pt-20">
     <!-- Hero -->
@@ -187,29 +262,28 @@
       </div>
       <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
         <div class="max-w-2xl">
-          <p class="text-sm font-medium tracking-[0.2em] uppercase text-on-surface/60 mb-4">Our Story</p>
+          <p class="text-sm font-medium tracking-[0.2em] uppercase text-on-surface/60 mb-4">Who We Are</p>
           <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight mb-6">
-            A Legacy of Excellence <span class="italic">Since 2005</span>
+            World Housing Spain<span class="italic">.</span>
           </h1>
           <p class="text-on-surface/70 text-lg leading-relaxed">
-            For over two decades, World Housing Spain has been the trusted name in luxury real estate on the Costa Blanca — matching exceptional properties with discerning buyers from around the world.
+            Real Estate. Strategy. Trust.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Story -->
+    <!-- Who We Are -->
     <section class="py-20 lg:py-28 bg-surface">
       <div class="max-w-7xl mx-auto px-6 lg:px-12">
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div>
             <h2 class="font-display text-3xl lg:text-4xl font-medium tracking-tight mb-6">
-              Our <span class="italic">Story</span>
+              Who <span class="italic">We Are</span>
             </h2>
             <div class="space-y-4 text-on-surface/70 leading-relaxed">
-              <p>World Housing Spain was founded in 2005 with a simple vision: to provide an unparalleled experience for those seeking luxury property on the Costa Blanca. What began as a small boutique agency in Moraira has grown into one of the region's most respected real estate brands.</p>
-              <p>Our success is built on deep local knowledge, a vast network of contacts, and an unwavering commitment to our clients. We understand that buying or selling a home is one of the most significant decisions you will make, and we treat every transaction with the care and attention it deserves.</p>
-              <p>Today, with offices in Moraira, Altea, and Jávea, we serve a global clientele — from European executives seeking holiday retreats to international investors building their dream portfolios.</p>
+              <p>World Housing Spain is a real estate agency specialising in premium properties and investment opportunities on the Costa Blanca. We work with international buyers and property owners who are looking for more than just a transaction — they are seeking clarity, security, and strategic advice.</p>
+              <p>Our approach combines real estate expertise, business vision, and highly personalised service. We understand that acquiring or selling a high-value property is not just a financial operation — it is a lifestyle and asset decision.</p>
             </div>
           </div>
           <div class="aspect-[4/3] bg-surface-container-highest rounded-xl overflow-hidden">
@@ -219,21 +293,58 @@
       </div>
     </section>
 
+    <!-- What We Offer -->
+    <section class="py-20 lg:py-28 bg-surface-container-low">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16">
+          <p class="text-sm font-medium tracking-[0.2em] uppercase text-on-surface/60 mb-4">What We Offer</p>
+          <h2 class="font-display text-3xl lg:text-4xl font-medium tracking-tight">
+            Our <span class="italic">Services</span>
+          </h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="p-6 bg-surface rounded-xl text-center">
+            <span class="material-symbols-outlined text-3xl text-primary mb-4">home_work</span>
+            <h3 class="font-display text-lg font-medium mb-2">Full-Service Advisory</h3>
+            <p class="text-xs text-on-surface/60 leading-relaxed">Integral advisory in the purchase and sale of premium properties, from valuation to completion.</p>
+          </div>
+          <div class="p-6 bg-surface rounded-xl text-center">
+            <span class="material-symbols-outlined text-3xl text-primary mb-4">public</span>
+            <h3 class="font-display text-lg font-medium mb-2">International Marketing</h3>
+            <p class="text-xs text-on-surface/60 leading-relaxed">International commercialisation strategies to connect your property with qualified buyers worldwide.</p>
+          </div>
+          <div class="p-6 bg-surface rounded-xl text-center">
+            <span class="material-symbols-outlined text-3xl text-primary mb-4">support_agent</span>
+            <h3 class="font-display text-lg font-medium mb-2">Professional Management</h3>
+            <p class="text-xs text-on-surface/60 leading-relaxed">Professional management and full accompaniment throughout the entire process, from listing to closing.</p>
+          </div>
+          <div class="p-6 bg-surface rounded-xl text-center">
+            <span class="material-symbols-outlined text-3xl text-primary mb-4">translate</span>
+            <h3 class="font-display text-lg font-medium mb-2">Multilingual Service</h3>
+            <p class="text-xs text-on-surface/60 leading-relaxed">Multilingual support with certified translation for official documentation and procedures.</p>
+          </div>
+        </div>
+        <div class="mt-12 max-w-3xl mx-auto text-center">
+          <p class="text-on-surface/70 leading-relaxed">In addition to our expertise in the property market, we offer representation services for international clients who are not physically present in Spain. We also provide certified translation for documentation and official procedures, ensuring our foreign clients can proceed with complete confidence, clarity, and professional support.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- Stats -->
     <section class="py-20 lg:py-28 bg-primary">
       <div class="max-w-7xl mx-auto px-6 lg:px-12">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div>
-            <p class="font-display text-4xl lg:text-5xl font-medium text-on-primary mb-2">€2B+</p>
-            <p class="text-sm text-on-primary/70">Total Sales</p>
+            <p class="font-display text-4xl lg:text-5xl font-medium text-on-primary mb-2">28+</p>
+            <p class="text-sm text-on-primary/70">Years Experience</p>
           </div>
           <div>
             <p class="font-display text-4xl lg:text-5xl font-medium text-on-primary mb-2">500+</p>
             <p class="text-sm text-on-primary/70">Properties Sold</p>
           </div>
           <div>
-            <p class="font-display text-4xl lg:text-5xl font-medium text-on-primary mb-2">20+</p>
-            <p class="text-sm text-on-primary/70">Years Experience</p>
+            <p class="font-display text-4xl lg:text-5xl font-medium text-on-primary mb-2">€2B+</p>
+            <p class="text-sm text-on-primary/70">Total Sales</p>
           </div>
           <div>
             <p class="font-display text-4xl lg:text-5xl font-medium text-on-primary mb-2">3</p>
@@ -247,35 +358,35 @@
     <section id="team" class="py-20 lg:py-28 bg-surface-container-low">
       <div class="max-w-7xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
-          <p class="text-sm font-medium tracking-[0.2em] uppercase text-on-surface/60 mb-4">Our Team</p>
+          <p class="text-sm font-medium tracking-[0.2em] uppercase text-on-surface/60 mb-4">Our Leadership</p>
           <h2 class="font-display text-3xl lg:text-4xl font-medium tracking-tight">
-            Meet the <span class="italic">Experts</span>
+            The <span class="italic">Team</span>
           </h2>
         </div>
         <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
           <div class="text-center">
             <div class="w-40 h-40 mx-auto mb-6 rounded-full bg-surface-container-highest overflow-hidden">
-              <img src="images/mariluz-sanchez.jpg" alt="Mariluz Sánchez M." class="w-full h-full object-cover">
+              <img src="images/mariluz-sanchez.jpg" alt="Mari Luz Sánchez" class="w-full h-full object-cover">
             </div>
-            <h3 class="font-display text-xl font-medium mb-1">Mariluz Sánchez M.</h3>
+            <h3 class="font-display text-xl font-medium mb-1">Mari Luz Sánchez</h3>
             <p class="text-sm text-primary font-medium mb-3">CEO & Managing Director</p>
-            <p class="text-xs text-on-surface/60 leading-relaxed max-w-xs mx-auto">With over 28 years of experience in the real estate sector, Mariluz has built her career on integrity, personalised service, and a deep understanding of the market. A registered real estate agent and businesswoman, her primary priority is protecting the interests of each client, ensuring clear, secure, and well-managed processes. Her leadership is based on trust and a commitment to providing professional service with a personal touch, making every client feel accompanied and correctly advised at every step of their property journey on the Costa Blanca.</p>
+            <p class="text-xs text-on-surface/60 leading-relaxed max-w-xs mx-auto">With more than 28 years of experience in the real estate sector, Mari Luz Sánchez has built her career on integrity, personalised service, and a deep understanding of the market. A registered real estate agent and businesswoman, her primary priority is protecting the interests of each client, ensuring clear, secure, and well-managed processes. Her leadership is based on trust and a commitment to providing professional service with a personal touch.</p>
             <div class="flex items-center justify-center gap-3 mt-4">
-              <a href="https://www.facebook.com/profile.php?id=61558765943028" class="w-9 h-9 rounded-full border border-outline-variant flex items-center justify-center text-on-surface/60 hover:text-primary hover:border-primary transition-colors" aria-label="Facebook Mariluz Sánchez"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-              <a href="https://www.instagram.com/worldhousingspain/" class="w-9 h-9 rounded-full border border-outline-variant flex items-center justify-center text-on-surface/60 hover:text-primary hover:border-primary transition-colors" aria-label="Instagram Mariluz Sánchez"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+              <a href="https://www.facebook.com/profile.php?id=61558765943028" class="w-9 h-9 rounded-full border border-outline-variant flex items-center justify-center text-on-surface/60 hover:text-primary hover:border-primary transition-colors" aria-label="Facebook Mari Luz Sánchez"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+              <a href="https://www.instagram.com/worldhousingspain/" class="w-9 h-9 rounded-full border border-outline-variant flex items-center justify-center text-on-surface/60 hover:text-primary hover:border-primary transition-colors" aria-label="Instagram Mari Luz Sánchez"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
             </div>
             <button onclick="openModal('mariluz')" class="mt-4 inline-flex items-center gap-2 px-4 py-2 text-xs font-medium tracking-wide uppercase bg-primary text-on-primary rounded-lg hover:bg-[#235a3a] transition-colors"><span class="material-symbols-outlined text-[16px]">badge</span>Details</button>
           </div>
           <div class="text-center">
             <div class="w-40 h-40 mx-auto mb-6 rounded-full bg-surface-container-highest overflow-hidden">
-              <img src="images/ana-isa.jpg" alt="Ana Isa O." class="w-full h-full object-cover">
+              <img src="images/ana-isa.jpg" alt="Ana Isabel Obando" class="w-full h-full object-cover">
             </div>
-            <h3 class="font-display text-xl font-medium mb-1">Ana Isa O.</h3>
+            <h3 class="font-display text-xl font-medium mb-1">Ana Isabel Obando</h3>
             <p class="text-sm text-primary font-medium mb-3">Commercial Director & Real Estate Advisor</p>
-            <p class="text-xs text-on-surface/60 leading-relaxed max-w-xs mx-auto">Ana Isabel brings over 24 years of experience in strategic business development, marketing, and brand positioning in multinational environments. At World Housing Spain she leads commercial strategy and expansion, focusing on acquiring qualified clients and strengthening the brand's presence in key markets. Her contribution combines strategic vision, structure, and a results-driven approach, ensuring each property is properly positioned and every client receives a professional and efficient service.</p>
+            <p class="text-xs text-on-surface/60 leading-relaxed max-w-xs mx-auto">Ana Isabel brings more than 24 years of experience in strategic business development, marketing, and brand positioning in multinational environments. At World Housing Spain she leads commercial strategy and expansion, focusing on acquiring qualified clients and strengthening the brand's presence in key markets. Her contribution combines strategic vision, structure, and a results-driven approach, ensuring each property is properly positioned and every client receives professional and efficient service.</p>
             <div class="flex items-center justify-center gap-3 mt-4">
-              <a href="https://www.facebook.com/profile.php?id=61558765943028" class="w-9 h-9 rounded-full border border-outline-variant flex items-center justify-center text-on-surface/60 hover:text-primary hover:border-primary transition-colors" aria-label="Facebook Ana Isa"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-              <a href="https://www.instagram.com/worldhousingspain/" class="w-9 h-9 rounded-full border border-outline-variant flex items-center justify-center text-on-surface/60 hover:text-primary hover:border-primary transition-colors" aria-label="Instagram Ana Isa"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+              <a href="https://www.facebook.com/profile.php?id=61558765943028" class="w-9 h-9 rounded-full border border-outline-variant flex items-center justify-center text-on-surface/60 hover:text-primary hover:border-primary transition-colors" aria-label="Facebook Ana Isabel Obando"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+              <a href="https://www.instagram.com/worldhousingspain/" class="w-9 h-9 rounded-full border border-outline-variant flex items-center justify-center text-on-surface/60 hover:text-primary hover:border-primary transition-colors" aria-label="Instagram Ana Isabel Obando"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
             </div>
             <button onclick="openModal('ana')" class="mt-4 inline-flex items-center gap-2 px-4 py-2 text-xs font-medium tracking-wide uppercase bg-primary text-on-primary rounded-lg hover:bg-[#235a3a] transition-colors"><span class="material-symbols-outlined text-[16px]">badge</span>Details</button>
           </div>
@@ -283,65 +394,106 @@
       </div>
     </section>
 
-    <!-- Values -->
+    <!-- Our Approach -->
     <section class="py-20 lg:py-28 bg-surface">
       <div class="max-w-7xl mx-auto px-6 lg:px-12">
         <div class="text-center mb-16">
-          <p class="text-sm font-medium tracking-[0.2em] uppercase text-on-surface/60 mb-4">Our Philosophy</p>
+          <p class="text-sm font-medium tracking-[0.2em] uppercase text-on-surface/60 mb-4">How We Work</p>
           <h2 class="font-display text-3xl lg:text-4xl font-medium tracking-tight">
-            What We <span class="italic">Believe</span>
+            Our <span class="italic">Approach</span>
           </h2>
         </div>
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="p-8 bg-surface-container-low rounded-xl text-center">
-            <span class="material-symbols-outlined text-3xl text-primary mb-4">handshake</span>
-            <h3 class="font-display text-xl font-medium mb-3">Integrity First</h3>
-            <p class="text-sm text-on-surface/60 leading-relaxed">Honesty and transparency are the foundation of every relationship we build with our clients, partners, and colleagues.</p>
+        <div class="grid md:grid-cols-2 gap-12 lg:gap-20">
+          <!-- For Buyers -->
+          <div class="p-8 bg-surface-container-low rounded-xl">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="material-symbols-outlined text-3xl text-primary">shopping_cart</span>
+              <h3 class="font-display text-2xl font-medium">For Buyers</h3>
+            </div>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-[20px] text-primary mt-0.5">check_circle</span>
+                <p class="text-sm text-on-surface/70">Access to carefully selected properties matched to your requirements.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-[20px] text-primary mt-0.5">check_circle</span>
+                <p class="text-sm text-on-surface/70">Clear, professional advice at every stage of the process.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-[20px] text-primary mt-0.5">check_circle</span>
+                <p class="text-sm text-on-surface/70">Legal and administrative accompaniment throughout.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-[20px] text-primary mt-0.5">check_circle</span>
+                <p class="text-sm text-on-surface/70">Transparent communication with no pressure.</p>
+              </li>
+            </ul>
           </div>
-          <div class="p-8 bg-surface-container-low rounded-xl text-center">
-            <span class="material-symbols-outlined text-3xl text-primary mb-4">diamond</span>
-            <h3 class="font-display text-xl font-medium mb-3">Uncompromising Quality</h3>
-            <p class="text-sm text-on-surface/60 leading-relaxed">We curate only the finest properties and deliver service that exceeds expectations at every turn.</p>
-          </div>
-          <div class="p-8 bg-surface-container-low rounded-xl text-center">
-            <span class="material-symbols-outlined text-3xl text-primary mb-4">public</span>
-            <h3 class="font-display text-xl font-medium mb-3">Global Perspective</h3>
-            <p class="text-sm text-on-surface/60 leading-relaxed">We combine deep local expertise with a worldwide network, connecting properties with the right buyers across borders.</p>
+          <!-- For Sellers -->
+          <div class="p-8 bg-surface-container-low rounded-xl">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="material-symbols-outlined text-3xl text-primary">sell</span>
+              <h3 class="font-display text-2xl font-medium">For Sellers</h3>
+            </div>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-[20px] text-primary mt-0.5">check_circle</span>
+                <p class="text-sm text-on-surface/70">Premium positioning strategy tailored to the luxury segment.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-[20px] text-primary mt-0.5">check_circle</span>
+                <p class="text-sm text-on-surface/70">International marketing and qualified exposure to global buyers.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-[20px] text-primary mt-0.5">check_circle</span>
+                <p class="text-sm text-on-surface/70">Professional negotiation management to maximise your return.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-[20px] text-primary mt-0.5">check_circle</span>
+                <p class="text-sm text-on-surface/70">Protection of your property's image and value throughout.</p>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact CTA -->
-    <section class="py-20 lg:py-28 bg-primary">
-      <div class="max-w-7xl mx-auto px-6 lg:px-12 text-center">
-        <p class="text-sm font-medium tracking-[0.2em] uppercase text-primary-container/70 mb-4">Get In Touch</p>
-        <h2 class="font-display text-3xl lg:text-4xl font-medium tracking-tight text-on-primary mb-6">
-          Let's Start a <span class="italic">Conversation</span>
-        </h2>
-        <p class="text-on-primary/70 max-w-xl mx-auto mb-10 leading-relaxed">
-          Whether you are buying, selling, or simply exploring, our team is here to help. Reach out and discover the World Housing Spain difference.
-        </p>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="contact.html" class="inline-flex items-center gap-3 px-8 py-4 bg-on-primary text-primary text-sm font-medium tracking-wide uppercase rounded-lg hover:bg-on-primary/90 transition-colors shadow-elevation-1">
-            <span>Contact Us</span>
-            <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
-          </a>
-          <a href="tel:+34966146470" class="inline-flex items-center gap-3 px-8 py-4 border border-on-primary/30 text-on-primary text-sm font-medium tracking-wide uppercase rounded-lg hover:bg-on-primary/10 transition-colors">
-            <span class="material-symbols-outlined text-[20px]">call</span>
-            <span>+34 966 14 64 70</span>
-          </a>
+    <!-- Our Commitment -->
+    <section class="py-20 lg:py-28 bg-surface-container-low">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="max-w-3xl mx-auto text-center">
+          <p class="text-sm font-medium tracking-[0.2em] uppercase text-on-surface/60 mb-4">Our Commitment</p>
+          <h2 class="font-display text-3xl lg:text-4xl font-medium tracking-tight mb-8">
+            Trust. Results. <span class="italic">Reputation.</span>
+          </h2>
+          <p class="text-on-surface/70 leading-relaxed text-lg mb-8">
+            We do not chase volume. We build long-term relationships based on trust, results, and reputation. World Housing Spain represents a modern, strategic vision of the real estate sector on the Costa Blanca — where business expertise and a personal touch go hand in hand.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="contact.html" class="inline-flex items-center gap-3 px-8 py-4 bg-primary text-on-primary text-sm font-medium tracking-wide uppercase rounded-lg hover:bg-[#235a3a] transition-colors shadow-elevation-1">
+              <span>Get In Touch</span>
+              <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+            </a>
+            <a href="tel:+34966146470" class="inline-flex items-center gap-3 px-8 py-4 border border-outline text-sm font-medium tracking-wide uppercase rounded-lg hover:bg-surface-container transition-colors">
+              <span class="material-symbols-outlined text-[20px]">call</span>
+              <span>+34 966 14 64 70</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="py-16 bg-surface-container-low border-t border-outline-variant/50">
+<footer class="py-16 bg-surface-container-low border-t border-outline-variant/50">
     <div class="max-w-7xl mx-auto px-6 lg:px-12">
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
         <div>
           <img src="https://worldhousingspain.eu/wp-content/uploads/2024/09/whs-logo-retina-500.png" alt="World Housing Spain" class="h-10 w-auto brightness-0 mb-6">
-          <p class="text-on-surface/60 text-sm leading-relaxed">Luxury real estate on the Costa Blanca. Curating exceptional properties since 2005.</p>
+          <p class="text-on-surface/60 text-sm leading-relaxed">
+            Luxury real estate on the Costa Blanca. Curating exceptional properties since 2005.
+          </p>
+          <p class="text-on-surface/50 text-xs mt-4">+34 662 51 29 94 · +34 966 14 64 70</p>
+          <p class="text-on-surface/50 text-xs">worldhousingspain24@gmail.com</p>
         </div>
         <div>
           <h4 class="font-medium mb-4">Properties</h4>
@@ -357,7 +509,7 @@
           <ul class="space-y-3 text-sm text-on-surface/60">
             <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
             <li><a href="about.html#team" class="hover:text-primary transition-colors">Our Team</a></li>
-            
+            <li></li>
             <li><a href="contact.html" class="hover:text-primary transition-colors">Contact</a></li>
           </ul>
         </div>
@@ -374,8 +526,18 @@
       <div class="pt-8 border-t border-outline-variant/50 flex flex-col md:flex-row justify-between items-center gap-4">
         <p class="text-sm text-on-surface/50">&copy; 2026 World Housing Spain. All rights reserved.</p>
         <div class="flex items-center gap-6">
-          <a href="https://instagram.com/worldhousingspain" class="text-on-surface/50 hover:text-primary transition-colors" aria-label="Instagram"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-          <a href="https://linkedin.com/company/worldhousingspain" class="text-on-surface/50 hover:text-primary transition-colors" aria-label="LinkedIn"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://instagram.com/worldhousingspain" class="text-on-surface/50 hover:text-primary transition-colors" aria-label="Instagram">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@worldhousing.spain" target="_blank" rel="noopener noreferrer" class="text-on-surface/50 hover:text-primary transition-colors" aria-label="TikTok">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/WorldHousingSpain" target="_blank" rel="noopener noreferrer" class="text-on-surface/50 hover:text-primary transition-colors" aria-label="Facebook">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/world-housing-spain-3a1176385" target="_blank" rel="noopener noreferrer" class="text-on-surface/50 hover:text-primary transition-colors" aria-label="LinkedIn">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
         </div>
       </div>
     </div>
@@ -393,7 +555,7 @@
 function openModal(person){
   var data = {
     mariluz: {
-      name:'Mariluz Sánchez M.',
+      name:'Mari Luz Sánchez',
       title:'CEO & Managing Director',
       img:'images/mariluz-sanchez.jpg',
       license:'+34 966 14 64 70',
@@ -403,7 +565,7 @@ function openModal(person){
       whatsapp:'+34 645 44 26 32'
     },
     ana: {
-      name:'Ana Isa O.',
+      name:'Ana Isabel Obando',
       title:'Commercial Director & Real Estate Advisor',
       img:'images/ana-isa.jpg',
       license:'+34 966 14 64 70',
@@ -424,7 +586,7 @@ function closeModal(){
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
 </script>
   <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/34633754809" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-elevation-3 hover:scale-110 transition-transform duration-300" aria-label="Contact us on WhatsApp">
+  <a href="https://wa.me/34662512994" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-elevation-3 hover:scale-110 transition-transform duration-300" aria-label="Contact us on WhatsApp">
     <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
       <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.739-1.458L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.013-5.101-2.859-6.953C16.578 1.999 14.118.99 11.998.99c-5.441 0-9.866 4.372-9.87 9.802 0 1.714.473 3.391 1.369 4.869L2.512 21.99l6.135-1.836zM18.254 14.91c-.344-.173-2.035-1.004-2.348-1.118-.314-.115-.543-.173-.77.173-.228.347-.88 1.118-1.079 1.35-.198.232-.397.26-.74.088-.344-.173-1.45-.535-2.762-1.706-1.02-1.018-1.708-2.276-1.908-2.623-.198-.347-.021-.534.152-.706.156-.155.344-.36.516-.54.172-.18.229-.304.344-.508.115-.203.057-.383-.028-.556-.086-.173-.771-1.854-1.056-2.057-.278-.2-.56-.172-.77-.162-.198.009-.427.013-.656.013-.23 0-.602.087-.917.43-.314.343-1.199 1.15-1.199 2.802 0 1.652 1.2 3.25 1.369 3.48.17.23 2.362 3.633 5.722 5.093.801.348 1.424.555 1.912.712.805.257 1.537.221 2.115.141.644-.089 2.035-.83 2.319-1.63.284-.8 2.84-3.525.17-1.15z"/>
     </svg>
